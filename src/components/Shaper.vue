@@ -1,0 +1,245 @@
+<template>
+    <div class="shaper" v-if="circles.length && triangles.length">
+        <transition-group name="fade" >
+            <div v-for="triangle, index in triangles" :key="`triangle-${index}-wrapper`" class="triangle-wrapper" :style="getTriStyles()" :class="{ 'drift': Math.random() < 0.5 }">
+                <Triangle class='actual-shape' :fill="getTriStyles.fill" :key="`triangle-${index}`" />
+            </div>
+        </transition-group>
+
+        <transition-group name="fade" >
+            <div v-for="circle, index in circles" :key="`circle-${index}-wrapper`"  class="circle-wrapper drif" :style="getCircleStyles()" :class="{ 'drift2': Math.random() < 0.5 }">
+                <Circle class='actual-shape' :fill="getCircleStyles.fill" :key="`circle-${index}`" />
+            </div>
+        </transition-group>
+            
+        <transition-group name="fade">
+            <div v-for="rect, index in rects" :key="`rect-${index}-wrapper`"  class="rect-wrapper drif" :style="getRectStyles()" :class="{ 'drift': Math.random() < 0.5 }">
+                <Rect class='actual-shape' :fill="getRectStyles.fill" :style="getRectStyles()" :key="`rect-${index}`" />
+            </div>
+        </transition-group>
+
+        <button class="redraw-shapes" @click="shapeUp()">Redraw</button>
+    </div>
+</template>
+
+<script>
+import Circle from './shapes/Circle.vue';
+import Triangle from './shapes/Triangle.vue';
+import Rect from './shapes/Rect.vue';
+
+const colorSet = ['#54478c', '#2c699a', '#0db39e', '#83e377', '#f29e4c'];
+
+export default {
+    name: 'Shaper',
+    data() {
+        return {
+            circles: [],
+            triangles: [],
+            rects: [],
+            circlesCount: 0,
+            trianglesCount: 0,
+            rectsCount: 0,
+            createShapes: false,
+            interval: null,
+        }
+    },
+    components: {
+        Circle,
+        Triangle,
+        Rect,
+    },
+    mounted() {
+        this.shapeUp();
+
+        this.interval = setInterval(() => {
+            this.shapeUp();
+        }, 10000);
+    },
+    watch: {
+        createShapes() {
+            if (this.createShapes === true) {
+                this.shapeUp();
+
+                this.createShapes = false;
+            }
+        }
+    },
+    methods: {
+        getColorClass() {
+            const colors = ['white', 'PaleGreen', colorSet[0], colorSet[2], colorSet[1]];
+
+            return colors[Math.floor(Math.random()*colors.length)];
+        },
+        getDriftClass() {
+            const drifts = ['drift1', 'drift2', 'drift3'];
+
+            return drifts[Math.floor(Math.random()*drifts.length)];
+        },
+        getStyles() {
+            return {
+                'width': `${this.generateRandom(100, 300)}px`,
+                'fill': `${this.getColorClass}`
+            }
+        },
+        generateRandom(min = 0, max = 100) {
+            // find diff
+            let difference = max - min;
+
+            // generate random number 
+            let rand = Math.random();
+
+            // multiply with difference 
+            rand = Math.floor( rand * difference);
+
+            // add with min value 
+            rand = rand + min;
+
+            return rand;
+        },
+        getCircleStyles() {
+            return {
+                'width': `${this.generateRandom(60, 200)}px`,
+                'fill': `${this.getColorClass()}`,
+                'left': `${this.generateRandom(8, 80)}%`,
+                'bottom': `${this.generateRandom(30, 92)}%`,
+                'opacity': `0.${this.generateRandom(5, 9)}`,
+                'animationDelay': `0.${this.generateRandom(0, 9)}s`,
+                'filter': `blur(${this.generateRandom(0, 12)}px`,
+            }
+        },
+        getTriStyles() {
+            return {
+                'width': `${this.generateRandom(10, 220)}px`,
+                'fill': `${this.getColorClass()}`,
+                'left': `${this.generateRandom(8, 80)}%`,
+                'bottom': `${this.generateRandom(40, 110)}%`,
+                'opacity': `0.${this.generateRandom(4, 10)}`,
+                'animationDelay': `0.${this.generateRandom(0, 9)}s`,
+                'filter': `blur(${this.generateRandom(0, 12)}px`,
+            }
+        },
+        getRectStyles() {
+            return {
+                'height': `${this.generateRandom(100, 220)}px`,
+                'width': `${this.getColorClass()}`,
+                'fill': `${this.getColorClass()}`,
+                'left': `${this.generateRandom(8, 80)}%`,
+                'bottom': `${this.generateRandom(40, 110)}%`,
+                'animationDelay': `0.${this.generateRandom(0, 9)}s`,
+            }
+        },
+        shapeUp() {
+            this.circles = [];
+            this.circlesCount = 0;
+            this.triangles = [];
+            this.trianglesCount = 0;
+            this.rects = [];
+            this.rectsCount = 0;
+
+            this.circlesCount = this.generateRandom(5, 8);
+
+            for (let i = 0; i < this.circlesCount; i++) {
+                this.circles.push(`circle-${i}`);
+            }
+
+            this.trianglesCount = this.generateRandom(4, 10);
+
+            for (let i = 0; i < this.trianglesCount; i++) {
+                this.triangles.push(`triangle-${i}`);
+            }
+
+            this.rectsCount = this.generateRandom(10, 20);
+
+            for (let i = 0; i < this.rectsCount; i++) {
+                this.rects.push(`rect-${i}`);
+            }
+        }
+    },
+}
+</script>
+
+<style lang="scss">
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+
+  99% {
+      filter: blur(20px);
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translateX(100px);
+    transform: translateY(10px);
+  }
+
+  to {
+    transform: translateX(-100px);
+    transform: translateY(30px);
+  }
+
+  99% {
+      filter: blur(20px);
+  }
+}
+
+@keyframes appear {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.shaper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    * {
+        position: absolute;
+    }
+
+    button {
+        position: absolute;
+        right: 4rem;
+        font-size: 70%;
+    }
+}
+
+.circle, .triangle, rect {
+    position: absolute;
+}
+
+.drift {
+    animation-name: spin;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.actual-shape {
+    animation: appear;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+    animation-timing-function: reverse;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+</style>
