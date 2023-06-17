@@ -13,9 +13,7 @@
         </transition-group>
             
         <transition-group name="fade">
-            <div v-for="rect, index in rects" :key="`rect-${index}-wrapper`"  class="rect-wrapper drif" :style="getRectStyles()" :class="{ 'drift': Math.random() < 0.5 }">
-                <Rect class='actual-shape' :fill="getRectStyles.fill" :style="getRectStyles()" :key="`rect-${index}`" />
-            </div>
+            <div v-for="rect, index in rects" :key="`rect-${index}-wrapper`"  class="rect-wrapper drif" :style="getRectStyles()" :class="{ 'drift': Math.random() < 0.5 }" />
         </transition-group>
 
         <button class="redraw-shapes" @click="shapeUp()">Redraw</button>
@@ -25,7 +23,6 @@
 <script>
 import Circle from './shapes/Circle.vue';
 import Triangle from './shapes/Triangle.vue';
-import Rect from './shapes/Rect.vue';
 
 const colorSet = ['#54478c', '#2c699a', '#0db39e', '#83e377', '#f29e4c'];
 
@@ -46,7 +43,6 @@ export default {
     components: {
         Circle,
         Triangle,
-        Rect,
     },
     mounted() {
         this.shapeUp();
@@ -121,11 +117,12 @@ export default {
         getRectStyles() {
             return {
                 'height': `${this.generateRandom(100, 220)}px`,
-                'width': `${this.getColorClass()}`,
-                'fill': `${this.getColorClass()}`,
+                'width': `${this.generateRandom(6, 20)}px`,
+                'backgroundColor': `${this.getColorClass()}`,
                 'left': `${this.generateRandom(8, 80)}%`,
-                'bottom': `${this.generateRandom(40, 110)}%`,
+                'bottom': `${this.generateRandom(10, 80)}%`,
                 'animationDelay': `0.${this.generateRandom(0, 9)}s`,
+                'transform': `rotate(${this.generateRandom(0, 20)}deg)`,
             }
         },
         shapeUp() {
@@ -148,7 +145,7 @@ export default {
                 this.triangles.push(`triangle-${i}`);
             }
 
-            this.rectsCount = this.generateRandom(10, 20);
+            this.rectsCount = this.generateRandom(0, 0);
 
             for (let i = 0; i < this.rectsCount; i++) {
                 this.rects.push(`rect-${i}`);
