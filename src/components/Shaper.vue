@@ -123,6 +123,7 @@ export default {
                 'bottom': `${this.generateRandom(10, 80)}%`,
                 'animationDelay': `0.${this.generateRandom(0, 9)}s`,
                 'transform': `rotate(${this.generateRandom(0, 20)}deg)`,
+                'filter': `blur(${this.generateRandom(4, 12)}px`,
             }
         },
         shapeUp() {
@@ -145,7 +146,7 @@ export default {
                 this.triangles.push(`triangle-${i}`);
             }
 
-            this.rectsCount = this.generateRandom(0, 0);
+            this.rectsCount = this.generateRandom(0, 2);
 
             for (let i = 0; i < this.rectsCount; i++) {
                 this.rects.push(`rect-${i}`);
@@ -224,6 +225,7 @@ export default {
     animation-duration: 30s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    animation-direction: alternate;
 }
 
 .actual-shape {

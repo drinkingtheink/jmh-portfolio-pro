@@ -184,6 +184,18 @@ export default {
       protoSkills: [
         'Adobe Creative Suite', 'Figma','InVision', 'Lucidchart', 'Balsamiq', 'UX Research',
       ],
+      protoLinks: [
+        {
+          name: 'Swipe Library POC',
+          subtitle: 'Project: Finding the best library to use for a mobile experience',
+          bgImg: '../../prototyping/swipe-poc.png',
+        },
+        {
+          name: 'Configurable SVG Branding POC',
+          subtitle: 'Project: Iterating on the best end user experieceite',
+          bgImg: 'https://www.drinkingtheink.com/banners/svg-brand-banner.png',
+        },
+      ],
       dashText: 'Helping the data tell the story or show the way...',
       dashSkills: [
         'JavaScript','Vue.js', 'React', 'Ember.js', 'DataViz', 'Chart.js', 'D3', 'Geoplotting', 'Animation', 'SVG', 'Laravel',
@@ -470,6 +482,18 @@ $boxShadow: 0px 3px 5px 3px rgba(0,0,0,0.36);
     padding-left: 2rem;
     height: 34rem;
     overflow-y: scroll;
+
+    h3 {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+
+    h4 {
+      padding-top: 0;
+      margin-top: 0;
+      color: rgba(0, 0, 0, 0.6);
+      text-transform: uppercase;
+    }
   }
 
   .right-pane::-webkit-scrollbar {
