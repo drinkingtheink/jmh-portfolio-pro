@@ -44,7 +44,7 @@
           </section>
         </div>
         <div class="right-pane">
-          <h3>Wireframes for Project at Dun & Bradstreet - 2016</h3>
+          <h3>Wireframes for Project at Dun & Bradstreet - 2019</h3>
           <h4>PROJECT: Master Data Analysis and Education Application</h4>
           <section class="img-gallery">
             <img src="/prototyping/prototyping1.png" />
@@ -195,17 +195,17 @@ export default {
       ],
       protoLinks: [
         {
-          name: 'Swipe Library POC',
+          name: 'Swipe Library POC at Q2 - 2021',
           subtitle: 'Project: Finding the best library to use for a mobile experience',
           bgImg: '../../prototyping/swipe-poc.png',
           about: 'A simple, functional app was the best way to let stakeholders quickly review different functionality sets across several swiping library options. This allowed us to select what we determined to be the best option for the project and get started on real implementation.',
           href: 'https://swipe-poc.surge.sh/',
         },
         {
-          name: 'Configurable SVG Branding POC',
-          subtitle: 'Project: Iterating on the best end user experieceite',
+          name: 'Configurable SVG Branding POC at Q2 - 2022',
+          subtitle: 'Project: Iterating on the best end user experience',
           bgImg: 'https://www.drinkingtheink.com/banners/svg-brand-banner.png',
-          about: 'Sibilance...sibilance...',
+          about: 'We wanted to allow end users to brand their own in-app icons, but we weren\'t sure what controls to provide. So I threw together a few functional POCs that we could introduce in User Research to see which performed best.',
           href: 'https://icon-playground.netlify.app/',
         },
       ],
