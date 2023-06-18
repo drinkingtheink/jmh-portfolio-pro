@@ -132,8 +132,6 @@
     <section class="about-section">
       <a name="about" />
 
-      <Me class="me bottom" :lineOnly="true" />
-
       <main>
         <div class="left-about">
           <h2>About Me</h2>
