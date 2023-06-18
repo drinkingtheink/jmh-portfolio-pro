@@ -3,7 +3,7 @@
     <div class="color-morph top" />
     <header>
       <JHMonogram class="jmh" />
-      <nav>
+      <nav class="top">
         <a 
           v-for="mode in modeOptions" 
           :href="`#${mode}`"
@@ -189,7 +189,7 @@ export default {
       ],
       protoText: 'Low-fidelity/clickable wireframes and functional POCs let us talk about possibilities...',
       protoSkills: [
-        'Adobe Creative Suite', 'Figma','InVision', 'Lucidchart', 'Balsamiq', 'UX Research',
+        'Adobe Creative Suite', 'Figma','InVision', 'Lucidchart', 'Balsamiq', 'UX Research', 'Vue.js', 'React', 'Ember.js',
       ],
       protoLinks: [
         {
@@ -300,12 +300,14 @@ header {
   padding-top: 15px;
   height: $headerSize;
   margin-bottom: 10px;
-  // background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-content: center;
-  position: relative;
   z-index: 10;
+  position: sticky;
+	top: 0;
+  border-top: 2px solid $col3;
 
   a {
     border: none;
@@ -371,11 +373,12 @@ $textShad: 1px 2px 2px rgba(0,0,0,0.3);
   }
 }
 
-nav {
+nav.top {
   padding-top: 10px;
 
   a {
     font-size: 80%;
+    margin-top: -14px;
   }
 }
 
@@ -428,7 +431,7 @@ nav.large-nav {
 
 .jmh {
   width: 45px;
-  margin-top: -5px;
+  margin-top: -15px;
   margin-right: 10px;
 }
 
@@ -492,7 +495,7 @@ $boxShadowDark: 0px 3px 10px 3px rgba(0,0,0,0.8);
   .right-pane {
     width: 70%;
     padding-left: 2rem;
-    height: 34rem;
+    height: 37rem;
     overflow-y: scroll;
 
     h3 {
