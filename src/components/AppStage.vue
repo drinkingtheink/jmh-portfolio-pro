@@ -263,6 +263,24 @@ body {
 	}
 }
 
+@keyframes colorGrad {
+  0% {
+    border-color: $col1;
+  }
+  20% {
+    border-color: $col2;
+  }
+  40% {
+    border-color: $col3;
+  }
+  60% {
+    border-color: $col4;
+  }
+  80% {
+    border-color: $col5;
+  }
+}
+
 .app-stage {
   position: relative;
 
@@ -308,6 +326,10 @@ header {
   position: sticky;
 	top: 0;
   border-top: 2px solid $col3;
+  animation: colorGrad;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate-reverse;
 
   a {
     border: none;
