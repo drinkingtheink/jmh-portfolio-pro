@@ -294,7 +294,7 @@ body {
   }
 }
 
-$btnColor: rgba(255,255,255,0.7);
+$btnColor: rgba(255,255,255,0.9);
 
 header {
   padding-top: 10px;
