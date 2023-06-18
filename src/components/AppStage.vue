@@ -231,7 +231,7 @@ export default {
 </script>
 
 <style lang="scss">
-$headerSize: 50px;
+$headerSize: 35px;
 $sheerBg: rgba(0, 0, 0, 0.8);
 
 $col1: #54478c;
@@ -297,7 +297,7 @@ body {
 $btnColor: rgba(255,255,255,0.7);
 
 header {
-  padding-top: 15px;
+  padding-top: 10px;
   height: $headerSize;
   margin-bottom: 10px;
   background: rgba(0, 0, 0, 0.6);
@@ -374,11 +374,12 @@ $textShad: 1px 2px 2px rgba(0,0,0,0.3);
 }
 
 nav.top {
-  padding-top: 10px;
+  // padding-top: 10px;
 
   a {
-    font-size: 80%;
-    margin-top: -14px;
+    font-size: 70%;
+    display: inline-block;
+    margin-top: -4px;
   }
 }
 
@@ -430,8 +431,8 @@ nav.large-nav {
 }
 
 .jmh {
-  width: 45px;
-  margin-top: -15px;
+  width: 30px;
+  margin-top: -12px;
   margin-right: 10px;
 }
 
@@ -534,10 +535,12 @@ $boxShadowDark: 0px 3px 10px 3px rgba(0,0,0,0.8);
         font-size: 1.5rem;
         transition: all 0.2s;
         position: relative;
+        transform: scale(0.95);
 
         &:hover {
           box-shadow: $boxShadowDark;
-          background-position: 30% 25%;
+          background-position: 90% -55%;
+          transform: scale(1);
 
           span {
             background-color: rgba(palegreen,0.7);;

@@ -117,7 +117,7 @@ export default {
         getRectStyles() {
             return {
                 'height': `${this.generateRandom(100, 220)}px`,
-                'width': `${this.generateRandom(6, 20)}px`,
+                'width': `${this.generateRandom(6, 10)}px`,
                 'backgroundColor': `${this.getColorClass()}`,
                 'left': `${this.generateRandom(8, 80)}%`,
                 'bottom': `${this.generateRandom(10, 80)}%`,
@@ -146,7 +146,7 @@ export default {
                 this.triangles.push(`triangle-${i}`);
             }
 
-            this.rectsCount = this.generateRandom(0, 2);
+            this.rectsCount = this.generateRandom(0, 3);
 
             for (let i = 0; i < this.rectsCount; i++) {
                 this.rects.push(`rect-${i}`);
