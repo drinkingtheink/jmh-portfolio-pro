@@ -189,7 +189,7 @@ export default {
       ],
       protoText: 'Low-fidelity/clickable wireframes and functional POCs let us talk about possibilities...',
       protoSkills: [
-        'Adobe Creative Suite', 'Figma','InVision', 'Lucidchart', 'Balsamiq', 'UX Research', 'Vue.js', 'React', 'Ember.js',
+        'Adobe Creative Suite', 'Figma', 'InVision', 'Lucidchart', 'Balsamiq', 'UX Research', 'Whiteboarding', 'Ideation', 'Vue.js', 'React', 'Ember.js',
       ],
       protoLinks: [
         {
@@ -537,6 +537,7 @@ $boxShadowDark: 0px 3px 10px 3px rgba(0,0,0,0.8);
       font-size: 1rem;
       line-height: 1.5;
       text-align: left;
+      margin-bottom: 2rem;
     }
 
     .functional-app {
