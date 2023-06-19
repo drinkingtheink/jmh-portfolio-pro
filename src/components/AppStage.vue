@@ -161,7 +161,7 @@
   </div>
 
   <transition name="modal-fade">
-    <Modal v-if="openModal" @close="openModal = false" />
+    <Modal v-if="openModal" @close="openModal = false" :imgSrc="imgHighlight.src" />
   </transition>
 </template>
 
@@ -227,6 +227,7 @@ export default {
         'JavaScript', 'TypeScript', 'CSS3', 'Vue.js', 'React', 'Node.js', 'Express', 'Ember.js', 'Animation', 'SVG', 'Laravel', 'Webpack', 'Vite', 'Semantic Markup',
       ],
       designSysLabel: 'Design Systems',
+      imgHighlight: null,
     }
   },
   mounted() {
@@ -242,6 +243,7 @@ export default {
       galleryImg.forEach((img) => {
         img.addEventListener('click', (event, target) => {
           console.dir(img.src);
+          this.imgHighlight = img;
           this.openModal = true;
         });
       });
@@ -251,6 +253,7 @@ export default {
     },
     closeModal() {
       this.openModal = false;
+      this.imgHighlight = null;
     },
   }
 }

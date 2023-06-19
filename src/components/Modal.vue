@@ -1,14 +1,3 @@
-<script>
-  export default {
-    name: 'Modal',
-    methods: {
-      close() {
-        this.$emit('close');
-      },
-    },
-  };
-</script>
-
 <template>
   <transition name="modal-fade">
     <div class="modal-backdrop">
@@ -38,9 +27,7 @@
           class="modal-body"
           id="modalDescription"
         >
-          <slot name="body">
-            This is the default body!
-          </slot>
+            <img class="main-img" :src="imgSrc" />
         </section>
 
         <footer class="modal-footer">
@@ -61,7 +48,25 @@
   </transition>
 </template>
 
+<script>
+  export default {
+    name: 'Modal',
+    props: [
+        'imgSrc'
+    ],
+    methods: {
+      close() {
+        this.$emit('close');
+      },
+    },
+  };
+</script>
+
 <style>
+.main-img {
+    width: 100%;
+    height: 100%;
+}
   .modal-backdrop {
     position: fixed;
     top: 0;
@@ -76,11 +81,13 @@
   }
 
   .modal {
-    background: #FFFFFF;
+    background: rgba(0, 0, 0, 0.7);
     box-shadow: 2px 2px 20px 1px;
     overflow-x: auto;
     display: flex;
     flex-direction: column;
+    width: 80vw;
+    height: 80vh;
   }
 
   .modal-header,
@@ -129,10 +136,12 @@
   .modal-fade-enter,
   .modal-fade-leave-to {
     opacity: 0;
+    transform: translateY(-20px);
   }
 
   .modal-fade-enter-active,
   .modal-fade-leave-active {
     transition: opacity .5s ease;
+    transform: translateY(0);
   }
 </style>
