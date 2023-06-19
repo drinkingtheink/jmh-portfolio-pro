@@ -159,13 +159,18 @@
 
     <div class="color-morph bottom" />
   </div>
+
+  <transition name="modal-fade">
+    <Modal v-if="openModal" @close="openModal = false" />
+  </transition>
 </template>
 
 <script>
 import JHMonogram from './JHMonogram.vue';
 import Me from './Me.vue';
 import Grid from './Grid.vue';
-import Shaper from './Shaper.vue'
+import Shaper from './Shaper.vue';
+import Modal from './Modal.vue';
 
 // const colorSet = ['#54478c', '#2c699a', '#0db39e', '#83e377', '#f29e4c'];
 
@@ -176,9 +181,11 @@ export default {
     Me,
     Grid,
     Shaper,
+    Modal,
   },
   data() {
     return {
+      openModal: false,
       activeMode: 'prototyping',
       modeOptions: [
         'prototyping',
@@ -222,9 +229,28 @@ export default {
       designSysLabel: 'Design Systems',
     }
   },
+  mounted() {
+    this.makeImgsClickable();
+  },
   methods: {
     updateMode(mode) {
       this.activeMode = mode;
+    },
+    makeImgsClickable() {
+      const galleryImg = document.querySelectorAll('.img-gallery img');
+
+      galleryImg.forEach((img) => {
+        img.addEventListener('click', (event, target) => {
+          console.dir(img.src);
+          this.openModal = true;
+        });
+      });
+    },
+    showModal() {
+      this.openModal = true;
+    },
+    closeModal() {
+      this.openModal = false;
     },
   }
 }
@@ -649,8 +675,15 @@ $boxShadowDark: 0px 3px 10px 3px rgba(0,0,0,0.8);
   flex-wrap: wrap;
 
   img {
-    width: 45%;
-    margin: 10px 10px 0 0;
+    max-width: 45%;
+    margin: 5px 5px 0 0;
+    transition: all 0.2s;
+    border: 5px solid rgba(0, 0, 0, 0);
+
+    &:hover {
+      border-color: $sheerBg;
+      cursor: pointer;
+    }
   }
 }
 
@@ -738,5 +771,15 @@ button {
   to {
     stroke-dashoffset: 0;
   }
+}
+
+.modal-fade-enter,
+.modal-fade-leave-to {
+  opacity: 0;
+}
+
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: opacity .5s ease;
 }
 </style>
