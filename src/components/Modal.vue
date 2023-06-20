@@ -71,7 +71,7 @@
     flex-direction: column;
     width: 80vw;
     height: 80vh;
-    color: white;
+    color: palegreen;
     position: fixed;
   }
 
