@@ -47,19 +47,19 @@
           <h3>Wireframes for Project at Dun & Bradstreet - 2019</h3>
           <h4>PROJECT: Master Data Analysis and Education Tool</h4>
           <section class="img-gallery">
-            <img src="/prototyping/prototyping1.png" alt="D&B | Master Data Analysis and Education Tool" />
-            <img src="/prototyping/prototyping2.png" alt="D&B | Master Data Analysis and Education Tool" />
-            <img src="/prototyping/prototyping3.png" alt="D&B | Master Data Analysis and Education Tool" />
-            <img src="/prototyping/prototyping4.png" alt="D&B | Master Data Analysis and Education Tool" />
+            <img src="/prototyping/prototyping1.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" />
+            <img src="/prototyping/prototyping2.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" />
+            <img src="/prototyping/prototyping3.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" />
+            <img src="/prototyping/prototyping4.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" />
           </section>
 
           <h3>Wireframes for Project at Okta - 2021</h3>
           <h4>PROJECT: Solution Engineer Portal</h4>
           <section class="img-gallery">
-              <img src="/prototyping/udp1.png" alt="Okta | Solution Engineer Sales Portal" />
-              <img src="/prototyping/udp2.png" alt="Okta | Solution Engineer Sales Portal" />
-              <img src="/prototyping/udp3.png" alt="Okta | Solution Engineer Sales Portal" />
-              <img src="/prototyping/udp4.png" alt="Okta | Solution Engineer Sales Portal" />
+              <img src="/prototyping/udp1.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" />
+              <img src="/prototyping/udp2.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" />
+              <img src="/prototyping/udp3.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" />
+              <img src="/prototyping/udp4.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" />
           </section>
 
           <section v-for="link in protoLinks" :key="link.name" class="functional-app">
@@ -84,7 +84,15 @@
           </section>
         </div>
         <div class="right-pane">
-          <p>Images/Videos coming...</p>
+          <section class="img-gallery-alt">
+              <h3>Advanced API Monitoring at D&B - 2019</h3>
+              <h4>Monitoring millions of API interactions daily</h4>
+              <img src="/dashboards/advanced-monitoring.png" class="galleriable" alt="D&B | API Monitoring Dashboard" />
+
+              <h3>Family Tree Explorer at D&B - 2019</h3>
+              <h4>Allowing users to browse relationship trees within public companies</h4>
+              <img src="/dashboards/family-tree-explorer.gif" class="galleriable" alt="D&B | Family Tree Explorer" />
+          </section>
         </div>
       </section>
 
@@ -274,13 +282,14 @@ export default {
       this.activeMode = mode;
     },
     makeImgsClickable() {
-      const galleryImg = document.querySelectorAll('.img-gallery img');
+      const galleryImg = document.querySelectorAll('.galleriable');
 
       galleryImg.forEach((img) => {
         img.addEventListener('click', () => {
+          console.dir(img);
           this.activeImg = img;
           this.openModal = true;
-          this.imgColl = [...img.parentElement.children];
+          this.imgColl = [...img.parentElement.children].filter((img) => img.nodeName && img.nodeName === 'IMG');
         });
       });
     },
@@ -707,6 +716,16 @@ $boxShadowDark: 0px 3px 10px 3px rgba(0,0,0,0.8);
   height: 15rem;
 }
 
+@mixin imgGallery {
+  transition: all 0.2s;
+  border: 5px solid rgba(0, 0, 0, 0);
+
+  &:hover {
+    border-color: $sheerBg;
+    cursor: pointer;
+  }
+}
+
 .img-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -714,13 +733,14 @@ $boxShadowDark: 0px 3px 10px 3px rgba(0,0,0,0.8);
   img {
     max-width: 45%;
     margin: 5px 5px 0 0;
-    transition: all 0.2s;
-    border: 5px solid rgba(0, 0, 0, 0);
+    @include imgGallery;
+  }
+}
 
-    &:hover {
-      border-color: $sheerBg;
-      cursor: pointer;
-    }
+.img-gallery-alt {
+  img {
+    max-width: 95%;
+    @include imgGallery;
   }
 }
 
