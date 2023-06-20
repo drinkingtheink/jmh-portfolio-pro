@@ -231,8 +231,27 @@ export default {
       imgColl: [],
     }
   },
+  computed: {
+    matchingLinkIndexInColl() {
+      let linkMatch = null;
+
+      if (this.activeImg) {
+        linkMatch = this.imgColl.findIndex((img) => img.src === this.activeImg.src);
+      }
+
+      return linkMatch;
+    }
+  },
   mounted() {
     this.makeImgsClickable();
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowRight' && this.openModal) {
+          this.activeImg = this.imgColl[this.matchingLinkIndexInColl + 1];
+        } else if (event.key === 'ArrowLeft' && this.openModal) {
+          this.activeImg = this.imgColl[this.matchingLinkIndexInColl - 1];
+        }
+    });
   },
   methods: {
     updateMode(mode) {
@@ -257,24 +276,6 @@ export default {
       this.openModal = false;
       this.activeImg = null;
       this.imgColl = [];
-    },
-    getSiblings(e) {
-      // for collecting siblings
-      let siblings = []; 
-      // if no parent, return no sibling
-      if(!e.parentNode) {
-          return siblings;
-      }
-      // first child of the parent node
-      let sibling  = e.parentNode.firstChild;
-      // collecting siblings
-      while (sibling) {
-          if (sibling.nodeType === 1 && sibling !== e) {
-              siblings.push(sibling);
-          }
-          sibling = sibling.nextSibling;
-      }
-      return siblings;
     },
   }
 }
