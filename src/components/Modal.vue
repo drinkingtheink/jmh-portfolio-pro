@@ -166,7 +166,7 @@ $col6: #06365c;
       width: 40%;
       background-color: rgba(0, 0, 0, 0.6);
       padding-bottom: 20px;
-      max-width: 380px;
+      max-width: 280px;
 
       button {
           margin: 10px auto 0 auto;

@@ -227,11 +227,11 @@ export default {
       ],
       designSysText: 'Built-in consistent branding and functionality...',
       designSysSkills: [
-        'Web Components', 'Stencil', 'Lit', 'Accessibility',
+        'Web Components', 'Stencil', 'Lit', 'Accessibility', 'Semantic Markup',
       ],
       featuresText: 'Delivering what users want and what customers ask for...',
       featuresSkills: [
-        'JavaScript', 'TypeScript', 'CSS3', 'Vue.js', 'React', 'Node.js', 'Express', 'Ember.js', 'Animation', 'SVG', 'Laravel', 'Webpack', 'Vite', 'Semantic Markup',
+        'JavaScript', 'TypeScript', 'CSS3', 'Vue.js', 'React', 'Node.js', 'Express', 'Ember.js', 'Animation', 'SVG', 'Laravel', 'Webpack', 'Vite', 'Semantic Markup', 'Accessibility',
       ],
       designSysLabel: 'Design Systems',
       activeImg: null,
