@@ -14,7 +14,7 @@
             <img class="main-img" :src="imgSrc" />
 
             <div class="annotation">
-                <p>{{ aboutText }}</p>
+                <p class="about">{{ aboutText }}</p>
 
                 <button
                     type="button"
@@ -37,6 +37,11 @@
         'imgSrc',
         'aboutText',
     ],
+    mounted() {
+        document.addEventListener('keydown', (event) => {
+            this.close();
+        });
+    },
     methods: {
       close() {
         this.$emit('close');
@@ -89,6 +94,12 @@
 
   .modal-body {
       position: relative;
+
+      .about {
+          background-color: rgba(0, 0, 0, 0.4);
+          display: inline-block;
+          padding: 5px;
+      }
   }
 
   .modal-footer {
