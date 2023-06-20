@@ -100,7 +100,7 @@
       .about {
           background-color: rgba(0, 0, 0, 0.4);
           display: inline-block;
-          padding: 5px;
+          padding: 5px 10px;
       }
   }
 

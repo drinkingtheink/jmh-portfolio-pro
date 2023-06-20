@@ -240,15 +240,24 @@ export default {
       }
 
       return linkMatch;
-    }
+    },
+    endOfImgColl() {
+      return this.matchingLinkIndexInColl === (this.imgCount - 1);
+    },
+    beginningOfImgColl() {
+      return this.matchingLinkIndexInColl === 0;
+    },
+    imgCount() {
+      return this.imgColl?.length ? this.imgColl.length : 0;
+    },
   },
   mounted() {
     this.makeImgsClickable();
 
     document.addEventListener('keydown', (event) => {
-        if (event.key === 'ArrowRight' && this.openModal) {
+        if (event.key === 'ArrowRight' && this.openModal && !this.endOfImgColl) {
           this.activeImg = this.imgColl[this.matchingLinkIndexInColl + 1];
-        } else if (event.key === 'ArrowLeft' && this.openModal) {
+        } else if (event.key === 'ArrowLeft' && this.openModal && !this.beginningOfImgColl) {
           this.activeImg = this.imgColl[this.matchingLinkIndexInColl - 1];
         }
     });
@@ -262,7 +271,6 @@ export default {
 
       galleryImg.forEach((img) => {
         img.addEventListener('click', () => {
-          console.dir(img);
           this.activeImg = img;
           this.openModal = true;
           this.imgColl = [...img.parentElement.children];
