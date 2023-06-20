@@ -16,6 +16,10 @@
             <div class="annotation">
                 <p class="about">{{ aboutText }}</p>
 
+                <section class="key">
+                    <span class="key-item" v-for="img, index in imgColl" :key="img.src" :class="{ 'active': index === activeImgIndex}" />
+                </section>
+
                 <button
                     type="button"
                     @click="close"
@@ -36,6 +40,8 @@
     props: [
         'imgSrc',
         'aboutText',
+        'imgColl',
+        'activeImgIndex',
     ],
     mounted() {
         document.addEventListener('keydown', (event) => {
@@ -53,6 +59,13 @@
 </script>
 
 <style scoped lang="scss">
+$col1: #54478c;
+$col2: #2c699a;
+$col3: #0db39e;
+$col4: #83e377;
+$col5:#f29e4c;
+$col6: #06365c;
+
 .main-img {
     width: 100%;
     height: 100%;
@@ -101,6 +114,7 @@
           background-color: rgba(0, 0, 0, 0.4);
           display: inline-block;
           padding: 5px 10px;
+          color: white;
       }
   }
 
@@ -163,6 +177,28 @@
 
           &:hover {
               background-color: white;
+          }
+      }
+  }
+
+  .key {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-evenly;
+      width: 50%;
+      transition: all 0.2s;
+
+      .key-item {
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          display: block;
+          background-color: white;
+          border: 2px solid rgba(0, 0, 0, 0.7);
+
+          &.active {
+              background-color: $col4;
+              border-color: rgba(0, 0, 0, 0.4);
           }
       }
   }

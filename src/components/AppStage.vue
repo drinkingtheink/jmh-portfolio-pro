@@ -161,7 +161,14 @@
   </div>
 
   <transition name="modal-fade">
-    <Modal v-if="openModal" @close="openModal = false" :imgSrc="activeImg.src" :aboutText="activeImg.alt" />
+    <Modal 
+      v-if="openModal" 
+      @close="openModal = false" 
+      :imgSrc="activeImg.src" 
+      :aboutText="activeImg.alt" 
+      :imgColl="imgColl"
+      :activeImgIndex="matchingLinkIndexInColl"
+    />
   </transition>
 </template>
 
