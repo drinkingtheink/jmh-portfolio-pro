@@ -85,13 +85,21 @@
         </div>
         <div class="right-pane">
           <section class="img-gallery-alt">
-              <h3>Advanced API Monitoring at D&B - 2019</h3>
-              <h4>Monitoring millions of API interactions daily</h4>
-              <img src="/dashboards/advanced-monitoring.png" class="galleriable" alt="D&B | API Monitoring Dashboard" />
+            <h3>Composable Dashboard at Q2 - 2019-2023</h3>
+            <h4>Monitoring millions of API interactions daily</h4>
+            <img src="/dashboards/comp-dash-quick-glance.gif" class="galleriable" alt="Q2 | Composable Dashboard" />
 
-              <h3>Family Tree Explorer at D&B - 2019</h3>
-              <h4>Allowing users to browse relationship trees within public companies</h4>
-              <img src="/dashboards/family-tree-explorer.gif" class="galleriable" alt="D&B | Family Tree Explorer" />
+            <h3>Advanced API Monitoring at D&B - 2019</h3>
+            <h4>Monitoring millions of API interactions daily</h4>
+            <img src="/dashboards/advanced-monitoring.png" class="galleriable" alt="D&B | API Monitoring Dashboard" />
+
+            <h3>Family Tree Explorer at D&B - 2019</h3>
+            <h4>Allowing users to browse relationship trees within public companies</h4>
+            <img src="/dashboards/family-tree-explorer.gif" class="galleriable" alt="D&B | Family Tree Explorer" />
+
+            <h3>Company Location Plotter at D&B - 2019</h3>
+            <h4>Mapping the locations of public company entities</h4>
+            <img src="/dashboards/ubo-map.gif" class="galleriable" alt="D&B | Company Location Plotter" />
           </section>
         </div>
       </section>
