@@ -1,7 +1,7 @@
 <template>
   <div class="app-stage">
     <div class="color-morph top" />
-    <header>
+    <header class="app">
       <JHMonogram class="jmh" />
       <nav class="top">
         <a 
@@ -45,21 +45,21 @@
         </div>
         <div class="right-pane">
           <h3>Wireframes for Project at Dun & Bradstreet - 2019</h3>
-          <h4>PROJECT: Master Data Analysis and Education Application</h4>
+          <h4>PROJECT: Master Data Analysis and Education Tool</h4>
           <section class="img-gallery">
-            <img src="/prototyping/prototyping1.png" />
-            <img src="/prototyping/prototyping2.png" />
-            <img src="/prototyping/prototyping3.png" />
-            <img src="/prototyping/prototyping4.png" />
+            <img src="/prototyping/prototyping1.png" alt="D&B | Master Data Analysis and Education Tool" />
+            <img src="/prototyping/prototyping2.png" alt="D&B | Master Data Analysis and Education Tool" />
+            <img src="/prototyping/prototyping3.png" alt="D&B | Master Data Analysis and Education Tool" />
+            <img src="/prototyping/prototyping4.png" alt="D&B | Master Data Analysis and Education Tool" />
           </section>
 
           <h3>Wireframes for Project at Okta - 2021</h3>
           <h4>PROJECT: Solution Engineer Portal</h4>
           <section class="img-gallery">
-              <img src="/prototyping/udp1.png" />
-              <img src="/prototyping/udp2.png" />
-              <img src="/prototyping/udp3.png" />
-              <img src="/prototyping/udp4.png" />
+              <img src="/prototyping/udp1.png" alt="Okta | Solution Engineer Sales Portal Project" />
+              <img src="/prototyping/udp2.png" alt="Okta | Solution Engineer Sales Portal Project" />
+              <img src="/prototyping/udp3.png" alt="Okta | Solution Engineer Sales Portal Project" />
+              <img src="/prototyping/udp4.png" alt="Okta | Solution Engineer Sales Portal Project" />
           </section>
 
           <section v-for="link in protoLinks" :key="link.name" class="functional-app">
@@ -161,7 +161,7 @@
   </div>
 
   <transition name="modal-fade">
-    <Modal v-if="openModal" @close="openModal = false" :imgSrc="activeImg.src" />
+    <Modal v-if="openModal" @close="openModal = false" :imgSrc="activeImg.src" :aboutText="activeImg.alt" />
   </transition>
 </template>
 
@@ -241,8 +241,8 @@ export default {
       const galleryImg = document.querySelectorAll('.img-gallery img');
 
       galleryImg.forEach((img) => {
-        img.addEventListener('click', (event, target) => {
-          console.dir(img.src);
+        img.addEventListener('click', () => {
+          console.dir(img);
           this.activeImg = img;
           this.openModal = true;
         });
@@ -343,7 +343,7 @@ body {
 
 $btnColor: rgba(255,255,255,0.9);
 
-header {
+header.app {
   padding-top: 10px;
   height: $headerSize;
   margin-bottom: 10px;

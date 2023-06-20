@@ -5,44 +5,26 @@
         role="dialog"
         aria-labelledby="modalTitle"
         aria-describedby="modalDescription"
+        key="modal-component"
       >
-        <header
-          class="modal-header"
-          id="modalTitle"
-        >
-          <slot name="header">
-            This is the default tile!
-          </slot>
-          <button
-            type="button"
-            class="btn-close"
-            @click="close"
-            aria-label="Close modal"
-          >
-            x
-          </button>
-        </header>
-
         <section
           class="modal-body"
           id="modalDescription"
         >
             <img class="main-img" :src="imgSrc" />
-        </section>
 
-        <footer class="modal-footer">
-          <slot name="footer">
-            This is the default footer!
-          </slot>
-          <button
-            type="button"
-            class="btn-green"
-            @click="close"
-            aria-label="Close modal"
-          >
-            Close me!
-          </button>
-        </footer>
+            <div class="annotation">
+                <p>{{ aboutText }}</p>
+
+                <button
+                    type="button"
+                    @click="close"
+                    aria-label="Close modal"
+                >
+                    Close Window
+                </button>
+            </div>
+        </section>
       </div>
     </div>
   </transition>
@@ -52,7 +34,8 @@
   export default {
     name: 'Modal',
     props: [
-        'imgSrc'
+        'imgSrc',
+        'aboutText',
     ],
     methods: {
       close() {
@@ -62,7 +45,7 @@
   };
 </script>
 
-<style>
+<style scoped lang="scss">
 .main-img {
     width: 100%;
     height: 100%;
@@ -88,6 +71,8 @@
     flex-direction: column;
     width: 80vw;
     height: 80vh;
+    color: white;
+    position: fixed;
   }
 
   .modal-header,
@@ -99,8 +84,11 @@
   .modal-header {
     position: relative;
     border-bottom: 1px solid #eeeeee;
-    color: #4AAE9B;
     justify-content: space-between;
+  }
+
+  .modal-body {
+      position: relative;
   }
 
   .modal-footer {
@@ -143,5 +131,26 @@
   .modal-fade-leave-active {
     transition: opacity .5s ease;
     transform: translateY(0);
+  }
+
+  .annotation {
+      position: fixed;
+      top: 60%;
+      width: 40%;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding-bottom: 20px;
+      max-width: 380px;
+
+      button {
+          margin: 10px auto 0 auto;
+          width: 200px;
+          background-color: palegreen;
+          color: black;
+          transition: all 0.5s;
+
+          &:hover {
+              background-color: white;
+          }
+      }
   }
 </style>
