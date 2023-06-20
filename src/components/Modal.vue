@@ -39,7 +39,9 @@
     ],
     mounted() {
         document.addEventListener('keydown', (event) => {
-            this.close();
+            if (event.key === 'Escape') {
+                this.close();
+            }
         });
     },
     methods: {
