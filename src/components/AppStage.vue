@@ -89,6 +89,10 @@
             <h4>Customizable Dashboards used by millions of citizens</h4>
             <img src="/dashboards/comp-dash-quick-glance.gif" class="galleriable" alt="Q2 | Composable Dashboard" />
 
+            <h3>Data Optimizer at D&B - 2019</h3>
+            <h4>Tell the story of data's journey from dirty to actionable</h4>
+            <img src="/dashboards/optimizer.gif" class="galleriable" alt="D&B | Data Optimizer" />
+
             <h3>Advanced API Monitoring at D&B - 2019</h3>
             <h4>Monitoring millions of API interactions daily</h4>
             <img src="/dashboards/advanced-monitoring.png" class="galleriable" alt="D&B | API Monitoring Dashboard" />
@@ -103,7 +107,7 @@
 
             <h3>Data Maturity Matrix at D&B - 2018</h3>
             <h4>Visualizing the state of a customer's Master Data Management Program</h4>
-            <img src="/dashboards/maturity-matrix.gif" class="galleriable" alt="D&B | Company Location Plotter" />
+            <img src="/dashboards/maturity-matrix.gif" class="galleriable" alt="D&B | Data Maturity Matrix" />
           </section>
         </div>
       </section>
