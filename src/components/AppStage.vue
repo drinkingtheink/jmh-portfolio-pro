@@ -125,10 +125,15 @@
           </section>
         </div>
         <div class="right-pane">
-          <section class="img-gallery-alt">
-            <h3>Carousel Element at Q2 - 2019-2023</h3>
-            <h4>Accessible Carousel Element for the Tecton Design System</h4>
-            <img src="/designSystems/q2-carousel-demo.gif" class="galleriable" alt="Q2 | Tecton Carousel Element" />
+          <section v-for="link in designSysLinks" :key="link.name" class="functional-app img-gallery-alt">
+            <h3>{{ link.name }}</h3>
+            <h4>{{ link.subtitle }}</h4>
+
+            <img :src="link.imgSrc" class="galleriable" :alt="`${link.name}`" />
+
+            <a :href="link.href" target="_blank noreferrer" :style="{ backgroundImage: `url(${link.bgImg})` }"><span>Try It Yourself</span></a>
+
+            <p>{{ link.about }}</p>
           </section>
         </div>
       </section>
@@ -239,11 +244,21 @@ export default {
       ],
       dashText: 'Helping the data tell the story or show the way...',
       dashSkills: [
-        'JavaScript','Vue.js', 'React', 'Ember.js', 'DataViz', 'Chart.js', 'D3', 'Geoplotting', 'Animation', 'SVG', 'Laravel',
+        'JavaScript', 'TypeScript', 'Vue.js', 'React', 'Ember.js', 'DataViz', 'Chart.js', 'D3', 'Geoplotting', 'Animation', 'Accessibility', 'SVG', 'Laravel', 'Semantic Markup', 'Information Architecture',
       ],
       designSysText: 'Built-in consistent branding and functionality...',
       designSysSkills: [
         'Web Components', 'Stencil', 'Lit', 'Accessibility', 'Semantic Markup',
+      ],
+      designSysLinks: [
+        {
+          name: 'Carousel Element at Q2 - 2019-2023',
+          subtitle: 'Accessible Carousel Element for the Tecton Design System',
+          bgImg: '../../designSystems/tecton-bg.png',
+          about: '',
+          href: 'https://tecton.q2developer.com/ui/q2-carousel',
+          imgSrc: '../../designSystems/q2-carousel-demo.gif',
+        },
       ],
       featuresText: 'Delivering what users want and what customers ask for...',
       featuresSkills: [
@@ -326,6 +341,9 @@ $col6: #06365c;
 
 $appWidth: 1200px;
 
+$boxShadow: 0px 3px 5px 3px rgba(0,0,0,0.36);
+$boxShadowDark: 0px 3px 10px 3px rgba(0,0,0,0.8);
+
 body {
   background-color: $col2;
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%2306365c' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
@@ -359,6 +377,52 @@ body {
   80% {
     border-color: $col5;
   }
+}
+
+@mixin lrgbtn {
+  display: block;
+  height: 5rem;
+  background-size: cover;
+  background-position: 20%;
+  box-shadow: $boxShadow;
+  width: 80%;
+  border-radius: 10px;
+  margin: 1rem auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $sheerBg;
+  font-size: 1.5rem;
+  transition: all 0.2s;
+  position: relative;
+  transform: scale(0.95);
+
+  &:hover {
+    box-shadow: $boxShadowDark;
+    background-position: 90% -55%;
+    transform: scale(1);
+
+    span {
+      background-color: rgba(palegreen,0.7);;
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-shadow: 3px 3px 20px #fff,
+      -2px 1px 30px #fff;
+    padding: 10px;
+    display: inline-block;
+    transition: all 0.2s;
+    background-color: rgba(255,255,255,0.5);
+  }
+}
+
+.lrgbtn {
+  @include lrgbtn();
 }
 
 .app-stage {
@@ -534,9 +598,6 @@ nav.large-nav {
   margin-right: 10px;
 }
 
-$boxShadow: 0px 3px 5px 3px rgba(0,0,0,0.36);
-$boxShadowDark: 0px 3px 10px 3px rgba(0,0,0,0.8);
-
 .panel {
   margin: 0 2rem 2rem 2rem;
   padding: 1rem 1rem 3rem 1rem;
@@ -620,60 +681,7 @@ $boxShadowDark: 0px 3px 10px 3px rgba(0,0,0,0.8);
       display: block;
 
       a {
-        display: block;
-        height: 5rem;
-        background-size: cover;
-        background-position: 20%;
-        box-shadow: $boxShadow;
-        width: 80%;
-        border-radius: 10px;
-        margin: 0 auto;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: $sheerBg;
-        font-size: 1.5rem;
-        transition: all 0.2s;
-        position: relative;
-        transform: scale(0.95);
-
-        &:hover {
-          box-shadow: $boxShadowDark;
-          background-position: 90% -55%;
-          transform: scale(1);
-
-          span {
-            background-color: rgba(palegreen,0.7);;
-          }
-        }
-
-        span {
-          position: absolute;
-          top: 25%;
-          right: 0;
-          left: 0;
-          margin: auto;
-          text-shadow: 3px 3px 20px #fff,
-            -2px 1px 30px #fff;
-          padding: 10px;
-          display: inline-block;
-          transition: all 0.2s;
-          background-color: rgba(255,255,255,0.5);
-        }
-
-        // span::after {
-        //   content: '';
-        //   height: 2.5rem;
-        //   width: 300px;
-        //   background-color: white;
-        //   display: inline-block;
-        //   position: absolute;
-        //   z-index: 0;
-        //   right: 0;
-        //   left: 0;
-        //   top: 0;
-        //   margin: -5px auto 0 auto;
-        //   filter: blur(7px);
-        // }
+        @include lrgbtn;
       }
     }
   }
