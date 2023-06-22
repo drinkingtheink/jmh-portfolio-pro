@@ -243,6 +243,14 @@ export default {
           href: 'https://icon-playground.netlify.app/',
           imgSrc: '../../prototyping/icon-playground-demo.gif',
         },
+        {
+          name: 'Background Gradient Tool at Q2 - 2020',
+          subtitle: 'Project: Iterating on the best end user experience',
+          bgImg: '../../prototyping/bg-gradient-demo.png',
+          about: 'We wanted to allow end users to build their own hero banner areas where they could add their own images and colors. I threw together this POC app with some preliminary controls that helped us decide which facets to ultimately offer in the experience.',
+          href: 'https://background-playground.netlify.app/',
+          imgSrc: '../../prototyping/bg-gradient-demo.gif',
+        },
       ],
       dashText: 'Helping the data tell the story or show the way...',
       dashSkills: [
