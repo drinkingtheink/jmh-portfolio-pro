@@ -91,6 +91,8 @@
             <h4>Customizable Dashboards used by millions of citizens</h4>
             <img src="/dashboards/comp-dash-quick-glance.gif" class="galleriable" alt="Q2 | Composable Dashboard" />
 
+            <p>This product is the combined effort of mamy teams across multiple verticals, but I was lucky enough to get to contribute heartily to the core display logic (combo of web components and custom markup) and styles (combo of grid and flex layouts). I helped guide this successful product from ideation to millions of users.</p>
+
             <h3>Data Optimizer at D&B - 2019</h3>
             <h4>Tell the story of data's journey from dirty to actionable</h4>
             <img src="/dashboards/optimizer.gif" class="galleriable" alt="D&B | Data Optimizer" />
@@ -255,7 +257,7 @@ export default {
           name: 'Carousel Element at Q2 - 2019-2023',
           subtitle: 'Accessible Carousel Element for the Tecton Design System',
           bgImg: '../../designSystems/tecton-bg.png',
-          about: '',
+          about: 'Can one build a truly accessible carousel? Probably not since by definition some content is hidden. But our customers demanded it and we gave it our best shot.',
           href: 'https://tecton.q2developer.com/ui/q2-carousel',
           imgSrc: '../../designSystems/q2-carousel-demo.gif',
         },
@@ -799,8 +801,8 @@ nav.large-nav {
       a {
         display: block;
         text-transform: uppercase;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: palegreen;
+        color: rgba(0, 0, 0, 0.8);
+        background-color: palegreen;
         transition: all 0.2s;
         text-decoration: none;
         margin-bottom: 5px;
@@ -809,8 +811,8 @@ nav.large-nav {
         width: 70%;
 
         &:hover {
-          color: rgba(0, 0, 0, 0.8);
-          background-color: palegreen;
+          background-color: rgba(0, 0, 0, 0.8);
+          color: palegreen;
         }
       }
     }
