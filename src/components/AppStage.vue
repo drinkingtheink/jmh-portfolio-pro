@@ -62,9 +62,11 @@
               <img src="/prototyping/udp4.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" />
           </section>
 
-          <section v-for="link in protoLinks" :key="link.name" class="functional-app">
+          <section v-for="link in protoLinks" :key="link.name" class="functional-app img-gallery-alt">
             <h3>{{ link.name }}</h3>
             <h4>{{ link.subtitle }}</h4>
+
+            <img :src="link.imgSrc" class="galleriable" :alt="`${link.name}`" />
 
             <a :href="link.href" target="_blank noreferrer" :style="{ backgroundImage: `url(${link.bgImg})` }"><span>Try It Yourself</span></a>
 
@@ -224,6 +226,7 @@ export default {
           bgImg: '../../prototyping/swipe-poc.png',
           about: 'A simple, functional app was the best way to let stakeholders quickly review different functionality sets across several swiping library options. This allowed us to select what we determined to be the best option for the project and get started on real implementation.',
           href: 'https://swipe-poc.surge.sh/',
+          imgSrc: '../../prototyping/swipe-poc-demo.gif',
         },
         {
           name: 'Configurable SVG Branding POC at Q2 - 2022',
@@ -231,6 +234,7 @@ export default {
           bgImg: 'https://www.drinkingtheink.com/banners/svg-brand-banner.png',
           about: 'We wanted to allow end users to brand their own in-app icons, but we weren\'t sure what controls to provide. So I threw together a few functional POCs that we could introduce in User Research to see which performed best.',
           href: 'https://icon-playground.netlify.app/',
+          imgSrc: '../../prototyping/swipe-poc-demo.gif',
         },
       ],
       dashText: 'Helping the data tell the story or show the way...',
