@@ -234,7 +234,7 @@ export default {
           bgImg: 'https://www.drinkingtheink.com/banners/svg-brand-banner.png',
           about: 'We wanted to allow end users to brand their own in-app icons, but we weren\'t sure what controls to provide. So I threw together a few functional POCs that we could introduce in User Research to see which performed best.',
           href: 'https://icon-playground.netlify.app/',
-          imgSrc: '../../prototyping/swipe-poc-demo.gif',
+          imgSrc: '../../prototyping/icon-playground-demo.gif',
         },
       ],
       dashText: 'Helping the data tell the story or show the way...',
