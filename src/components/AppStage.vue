@@ -123,7 +123,11 @@
           </section>
         </div>
         <div class="right-pane">
-          <p>Images/Videos coming...</p>
+          <section class="img-gallery-alt">
+            <h3>Carousel Element at Q2 - 2019-2023</h3>
+            <h4>Accessible Carousel Element for the Tecton Design System</h4>
+            <img src="/designSystems/q2-carousel-demo.gif" class="galleriable" alt="Q2 | Tecton Carousel Element" />
+          </section>
         </div>
       </section>
 
