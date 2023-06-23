@@ -88,7 +88,7 @@
         <div class="right-pane">
           <section class="img-gallery-alt">
             <h3>Composable Dashboard at Q2 - 2019-2023</h3>
-            <h4>Customizable Dashboards used by millions of citizens</h4>
+            <h4>Customizable Dashboards used by millions</h4>
             <img src="/dashboards/comp-dash-quick-glance.gif" class="galleriable" alt="Q2 | Composable Dashboard" />
 
             <p>This product is the combined effort of mamy teams across multiple verticals, but I was lucky enough to get to contribute heartily to the core display logic (combo of web components and custom markup) and styles (combo of grid and flex layouts). I helped guide this successful product from ideation to millions of users.</p>
@@ -104,6 +104,7 @@
             <h3>Family Tree Explorer at D&B - 2019</h3>
             <h4>Browse relationship trees within public companies</h4>
             <img src="/dashboards/family-tree-explorer.gif" class="galleriable" alt="D&B | Family Tree Explorer" />
+            <p>The impetus for this app was "how can we represent the many entities witin a complex company visually?" Using D&B's massive dataset, we used opacity to give a sense of depth and spacial positioning.</p>
 
             <h3>Company Location Plotter at D&B - 2019</h3>
             <h4>Mapping the locations of public company entities</h4>
