@@ -95,7 +95,7 @@
             <h3>Data Optimizer at D&B - 2019</h3>
             <h4>Tell the story of data's journey from dirty to actionable</h4>
             <img src="/dashboards/optimizer.gif" class="galleriable" alt="D&B | Data Optimizer" />
-            <p>I love the idea of using the browser as a narrative vehicle. This app walks users through the lifecycle of data records; both clean and in need of maintenance. Modern CSS and SVGs make it possible to tell stories in compelling ways.</p>
+            <p>I love the challenge of using the browser as a narrative vehicle. This app walks users through the lifecycle of data records; both clean and in need of maintenance. Modern CSS and SVGs make it possible to tell stories in compelling ways.</p>
 
             <h3>Advanced API Monitoring at D&B - 2019</h3>
             <h4>Monitoring millions of API interactions daily</h4>
@@ -679,7 +679,7 @@ nav.large-nav {
     h4 {
       padding-top: 0;
       margin-top: 0;
-      color: rgba(0, 0, 0, 0.6);
+      color: rgba(29, 13, 13, 0.6);
       text-transform: uppercase;
     }
 
@@ -688,6 +688,7 @@ nav.large-nav {
       line-height: 1.5;
       text-align: left;
       margin-bottom: 2rem;
+      padding-right: 1rem;
     }
 
     .functional-app {
