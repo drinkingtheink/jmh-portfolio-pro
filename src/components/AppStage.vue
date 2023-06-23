@@ -96,6 +96,7 @@
             <h3>Data Optimizer at D&B - 2019</h3>
             <h4>Tell the story of data's journey from dirty to actionable</h4>
             <img src="/dashboards/optimizer.gif" class="galleriable" alt="D&B | Data Optimizer" />
+            <p>I love the idea of using the browser as a narrative vehicle. This app walks users through the lifecycle of data records; both clean and in need of maintenance. Modern CSS and SVGs make it possible to tell stories in compelling ways.</p>
 
             <h3>Advanced API Monitoring at D&B - 2019</h3>
             <h4>Monitoring millions of API interactions daily</h4>
@@ -109,6 +110,7 @@
             <h3>Company Location Plotter at D&B - 2019</h3>
             <h4>Mapping the locations of public company entities</h4>
             <img src="/dashboards/ubo-map.gif" class="galleriable" alt="D&B | Company Location Plotter" />
+            <p>Another app based on the question: "how can we represent the many entities witin a complex company visually?" This app plots company HQs on a map to help provide context through physical locations.</p>
 
             <h3>Data Maturity Matrix at D&B - 2018</h3>
             <h4>Visualizing the state of a customer's Master Data Management Program</h4>
