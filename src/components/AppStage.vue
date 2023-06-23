@@ -100,6 +100,7 @@
             <h3>Advanced API Monitoring at D&B - 2019</h3>
             <h4>Monitoring millions of API interactions daily</h4>
             <img src="/dashboards/advanced-monitoring.png" class="galleriable" alt="D&B | API Monitoring Dashboard" />
+            <p>Everyday, D&B tracks millions of companies all over the world on over 250 data points per company. Advanced Monitoring allows companies to wade through this data and build their own insights on their customers and competitors. </p>
 
             <h3>Family Tree Explorer at D&B - 2019</h3>
             <h4>Browse relationship trees within public companies</h4>
