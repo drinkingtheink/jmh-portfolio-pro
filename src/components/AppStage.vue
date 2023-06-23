@@ -90,7 +90,6 @@
             <h3>Composable Dashboard at Q2 - 2019-2023</h3>
             <h4>Customizable Dashboards used by millions</h4>
             <img src="/dashboards/comp-dash-quick-glance.gif" class="galleriable" alt="Q2 | Composable Dashboard" />
-
             <p>This product is the combined effort of mamy teams across multiple verticals, but I was lucky enough to get to contribute heartily to the core display logic (combo of web components and custom markup) and styles (combo of grid and flex layouts). I helped guide this successful product from ideation to millions of users.</p>
 
             <h3>Data Optimizer at D&B - 2019</h3>
@@ -115,6 +114,7 @@
             <h3>Data Maturity Matrix at D&B - 2018</h3>
             <h4>Visualizing the state of a customer's Master Data Management Program</h4>
             <img src="/dashboards/maturity-matrix.gif" class="galleriable" alt="D&B | Data Maturity Matrix" />
+            <p>This app helps users diagnose their own Master Data Management Program efficiency and get feedback on performance and insight through a series of questions. A few different charts help users understand their MDM Program in greater detail.</p>
           </section>
         </div>
       </section>
