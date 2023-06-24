@@ -271,7 +271,7 @@ export default {
           bgImg: '../../designSystems/tecton-bg.png',
           about: 'Can one build a truly accessible carousel? Probably not since by definition some content is hidden. But our customers demanded it and we gave it our best shot.',
           href: 'https://tecton.q2developer.com/ui/q2-carousel',
-          imgSrc: '../../designSystems/q2-carousel-demo.gif',
+          imgSrc: 'https://i.ibb.co/gFFkfjc/q2-carousel-demo.gif',
         },
       ],
       featuresText: 'Delivering what users want and what customers ask for...',
