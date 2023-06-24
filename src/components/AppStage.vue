@@ -237,7 +237,7 @@ export default {
           bgImg: '../../prototyping/swipe-poc.png',
           about: 'A simple, functional app was the best way to let stakeholders quickly review different functionality sets across several swiping library options. This allowed us to select what we determined to be the best option for the project and get started on real implementation.',
           href: 'https://swipe-poc.surge.sh/',
-          imgSrc: '../../prototyping/swipe-poc-demo.gif',
+          imgSrc: 'https://i.ibb.co/wBtX9T7/swipe-poc-demo.gif',
         },
         {
           name: 'Configurable SVG Branding POC at Q2 - 2022',
@@ -245,7 +245,7 @@ export default {
           bgImg: 'https://www.drinkingtheink.com/banners/svg-brand-banner.png',
           about: 'We wanted to allow end users to brand their own in-app icons, but we weren\'t sure what controls to provide. So I threw together a few functional POCs that we could introduce in User Research to see which performed best.',
           href: 'https://icon-playground.netlify.app/',
-          imgSrc: '../../prototyping/icon-playground-demo.gif',
+          imgSrc: 'https://i.ibb.co/DkpGM8B/icon-playground-demo.gif',
         },
         {
           name: 'Background Gradient Tool at Q2 - 2020',
@@ -253,7 +253,7 @@ export default {
           bgImg: '../../prototyping/bg-gradient-demo.png',
           about: 'We wanted to allow end users to build their own hero banner areas where they could add their own images and colors. I threw together this POC app with some preliminary controls that helped us decide which facets to ultimately offer in the experience.',
           href: 'https://background-playground.netlify.app/',
-          imgSrc: '../../prototyping/bg-gradient-demo.gif',
+          imgSrc: 'https://i.ibb.co/6nBjbqX/bg-gradient-demo.gif',
         },
       ],
       dashText: 'Helping the data tell the story or show the way...',
