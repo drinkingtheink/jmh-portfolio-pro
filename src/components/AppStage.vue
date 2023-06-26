@@ -258,7 +258,7 @@ export default {
       ],
       dashText: 'Helping the data tell the story or show the way...',
       dashSkills: [
-        'JavaScript', 'TypeScript', 'Vue.js', 'React', 'Ember.js', 'DataViz', 'Chart.js', 'D3', 'Geoplotting', 'Animation', 'Accessibility', 'SVG', 'Laravel', 'Semantic Markup', 'Information Architecture',
+        'JavaScript', 'TypeScript', 'ES6', 'Vue.js', 'React', 'Ember.js', 'CSS3', 'DataViz', 'Chart.js', 'D3', 'Geoplotting', 'Animation', 'Accessibility', 'SVG', 'Laravel', 'Semantic Markup', 'Information Architecture',
       ],
       designSysText: 'Built-in consistent branding and functionality...',
       designSysSkills: [
