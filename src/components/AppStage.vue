@@ -17,7 +17,7 @@
         <Me class="me" />
         <div class="intro shaper-ready">
           <h2>Hi, I'm <strong>Jason</strong></h2>
-          <span>I'm a Software Engineer && UI/UX/U∞ Designer from Austin, TX. I like to design it and I like to make it work beautifully. And for as many people as possible. Thanks for stopping by.</span>
+          <span>I'm an experienced Software Engineer && UI/UX/U∞ Designer from Austin, TX. I like to design it and I like to make it work beautifully. And for as many people as possible. Thanks for stopping by.</span>
         </div>
 
         <Shaper class="shaper-stage" />
