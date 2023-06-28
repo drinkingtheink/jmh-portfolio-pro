@@ -76,6 +76,7 @@ export default {
     stroke:#83e377;
     stroke-miterlimit:10;
     stroke-width:7px;
+    stroke-dasharray:0 0 4.04 4.04;
 }
 .cls-8{
     stroke-dasharray:0 0 4.04 4.04;
