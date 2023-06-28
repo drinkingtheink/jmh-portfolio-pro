@@ -596,6 +596,12 @@ nav.large-nav {
       transform: translateY(-10px);
       color: palegreen;
     }
+
+    &.about {
+      #about-icon {
+        max-width: 230px;
+      }
+    }
   }
 }
 
