@@ -34,6 +34,7 @@
             <DashboardsIcon v-if="mode === 'dashboards'"  />
             <AboutIcon v-if="mode === 'about'"  />
             <ProtoIcon v-if="mode === 'prototyping'" />
+            <DesignSysIcon v-if="mode === 'designSystems'" />
           </a>
       </nav>
 
@@ -213,6 +214,7 @@ import Modal from './Modal.vue';
 import DashboardsIcon from './icons/DashboardsIcon.vue';
 import AboutIcon from './icons/AboutIcon.vue';
 import ProtoIcon from './icons/ProtoIcon.vue';
+import DesignSysIcon from './icons/DesignSysIcon.vue';
 
 // const colorSet = ['#54478c', '#2c699a', '#0db39e', '#83e377', '#f29e4c'];
 
@@ -227,6 +229,7 @@ export default {
     DashboardsIcon,
     AboutIcon,
     ProtoIcon,
+    DesignSysIcon,
   },
   data() {
     return {
