@@ -607,6 +607,12 @@ nav.large-nav {
         max-width: 230px;
       }
     }
+
+    &.prototyping {
+      svg {
+        margin-top: -10px;
+      }
+    }
   }
 }
 
