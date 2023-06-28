@@ -1,35 +1,30 @@
 <template>
-<svg id="dashboards-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 347 248">
-    <rect id="bg-screen" class="cls-5" x="14.99" y="49.69" width="149.53" height="99.68" rx="12.48" ry="12.48" />
-    <rect class="cls-1" x="73.73" y="31" width="218.95" height="145.97" rx="11.26" ry="11.26" />
+    <svg id="dashboards-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 347 248">
+    <rect id="bg-screen" class="cls-3" x="25.99" y="49.69" width="149.53" height="99.68" rx="12.48" ry="12.48" />
+    <rect class="cls-1" x="73.73" y="24" width="229.45" height="152.97" rx="11.26" ry="11.26" />
     <g id="bar-chart">
-        <rect id="bar-1" class="cls-5" x="193" y="70.16" width="9.79" height="26.7" />
-        <rect id="bar-3" class="cls-3" x="229.19" y="60.37" width="9.79" height="36.49" />
-        <rect id="bar-2" class="cls-4" x="211.1" y="47.02" width="9.79" height="49.84" />
-        <rect id="bar-end" class="cls-5" x="247.29" y="41.68" width="9.79" height="55.18" />
+        <rect id="bar-1" class="cls-5" x="198.72" y="65.04" width="10.26" height="27.98" />
+        <rect id="bar-3" class="cls-3" x="236.65" y="54.78" width="10.26" height="38.24" />
+        <rect id="bar-2" class="cls-4" x="217.68" y="40.79" width="10.26" height="52.23" />
+        <rect id="bar-end" class="cls-5" x="255.61" y="35.19" width="10.26" height="57.83" />
     </g>
-    <rect class="cls-6" x="108.89" y="117.78" width="56.07" height="6.23" />
-    <rect class="cls-6" x="94.93" y="118.22" width="6.4" height="6.17" />
-    <rect class="cls-6" x="108.89" y="133.45" width="56.07" height="6.23" />
-    <rect class="cls-6" x="94.93" y="133.9" width="6.4" height="6.17" />
-    <rect class="cls-6" x="108.89" y="149.12" width="56.07" height="6.23" />
-    <rect class="cls-6" x="94.93" y="149.57" width="6.4" height="6.17" />
-    <rect class="cls-6" x="202.04" y="149.12" width="56.07" height="6.23" />
-    <rect class="cls-6" x="188.08" y="149.57" width="6.4" height="6.17" />
-    <polygon
-        id="arrrow"
-        class="cls-4"
-        points="275.77 105.76 252.44 104.23 256.39 112.64 244.42 115.95 223.73 131.2 207.13 112.47 191.88 122.76 194.12 126.07 206.46 117.75 223.16 136.59 246.2 119.61 258.12 116.32 261.53 123.56 275.77 105.76"
-    />
+    <rect class="cls-6" x="110.58" y="114.94" width="58.76" height="6.53" />
+    <rect class="cls-6" x="95.94" y="115.41" width="6.7" height="6.46" />
+    <rect class="cls-6" x="110.58" y="131.36" width="58.76" height="6.53" />
+    <rect class="cls-6" x="95.94" y="131.83" width="6.7" height="6.46" />
+    <rect class="cls-6" x="110.58" y="147.79" width="58.76" height="6.53" />
+    <rect class="cls-6" x="95.94" y="148.25" width="6.7" height="6.46" />
+    <rect class="cls-6" x="208.2" y="147.79" width="58.76" height="6.53" />
+    <rect class="cls-6" x="193.57" y="148.25" width="6.7" height="6.46" />
+    <polygon id="arrrow" class="cls-4" points="285.46 102.35 261.01 100.74 265.15 109.56 252.6 113.02 230.92 129.01 213.53 109.38 197.55 120.16 199.89 123.63 212.82 114.91 230.33 134.65 254.47 116.86 266.96 113.41 270.54 121 285.46 102.35" />
     <rect class="cls-1" x="148.77" y="43.01" width="3.56" height="18.69" transform="translate(7.07 121.79) rotate(-45)" />
-    <rect id="fg-screen" class="cls-5" x="223.44" y="124.42" width="109.29" height="72.86" rx="14.36" ry="14.36" />
+    <rect id="fg-screen" class="cls-3" x="197.44" y="136.42" width="109.29" height="72.86" rx="14.36" ry="14.36" transform="translate(424.93 -79.24) rotate(90)" />
     <g id="pie-chat">
-        <path id="right-pie" class="cls-4" d="m155.11,65.66l-7.67,2.65c.67,1.96,1.05,4.08,1.05,6.29,0,9.82-7.19,17.8-16.02,17.8v8.9c13.25,0,24.03-11.98,24.03-26.7,0-3.14-.49-6.15-1.39-8.95Z" />
-        <path id="left-pie" class="cls-3" d="m112,74.61c0-4.44,1.64-8.49,4.34-11.61.24-.28.49-.55.75-.81l-6.3-6.3c-.26.26-.52.53-.76.8-4.3,4.74-6.92,11.03-6.92,17.92,0,14.72,11.98,26.7,26.7,26.7v-8.9c-9.82,0-17.8-7.99-17.8-17.8Z" />
-        <path id="top-pie" class="cls-2" d="m128.84,55.88c7.58-.58,14.4,3.71,17.46,10.21l8.3-3.29c-4.46-10.03-14.88-16.67-26.43-15.79-6.14.47-11.63,2.99-15.87,6.84l6.83,5.87c2.69-2.15,6.03-3.55,9.72-3.83Z" />
+        <path id="right-pie" class="cls-4" d="m159.02,60.33l-8.04,2.78c.7,2.05,1.1,4.27,1.1,6.6,0,10.29-7.53,18.65-16.79,18.65v9.33c13.89,0,25.18-12.55,25.18-27.98,0-3.29-.52-6.44-1.46-9.38Z" />
+        <path id="left-pie" class="cls-3" d="m113.84,69.7c0-4.65,1.72-8.9,4.54-12.17.25-.29.52-.58.79-.85l-6.6-6.6c-.27.28-.54.55-.8.84-4.51,4.97-7.26,11.56-7.26,18.78,0,15.43,12.55,27.98,27.98,27.98v-9.33c-10.29,0-18.65-8.37-18.65-18.65Z" />
+        <path id="top-pie" class="cls-2" d="m131.48,50.08c7.94-.6,15.09,3.89,18.29,10.7l8.7-3.45c-4.67-10.51-15.59-17.47-27.7-16.55-6.43.49-12.19,3.14-16.63,7.16l7.16,6.15c2.82-2.25,6.32-3.72,10.18-4.01Z" />
     </g>
-</svg>
-
+    </svg>
 </template>
 
 <script>
