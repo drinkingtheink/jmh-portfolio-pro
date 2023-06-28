@@ -616,6 +616,12 @@ nav.large-nav {
         margin-top: -10px;
       }
     }
+
+    &.designSystems {
+      svg {
+        transform: scale(0.9);
+      }
+    }
   }
 }
 
