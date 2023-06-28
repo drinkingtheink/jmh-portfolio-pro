@@ -428,7 +428,7 @@ body {
     transform: scale(1);
 
     span {
-      background-color: rgba(palegreen,0.7);;
+      background-color: rgba(palegreen,0.7);
     }
   }
 
