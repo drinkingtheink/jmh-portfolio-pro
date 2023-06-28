@@ -30,7 +30,9 @@
           :key="mode" 
           :class="[mode === activeMode ? 'active' : '', mode ? mode : null]"
           @click="updateMode(mode)"
-          >{{ mode === 'designSystems' ? designSysLabel : mode }}</a>
+          >{{ mode === 'designSystems' ? designSysLabel : mode }}
+            <DashboardsIcon v-if="mode === 'dashboards'"  />  
+          </a>
       </nav>
 
       <section class="panel prototyping">
@@ -204,6 +206,7 @@ import Me from './Me.vue';
 import Grid from './Grid.vue';
 import Shaper from './Shaper.vue';
 import Modal from './Modal.vue';
+import DashboardsIcon from './icons/DashboardsIcon.vue';
 
 // const colorSet = ['#54478c', '#2c699a', '#0db39e', '#83e377', '#f29e4c'];
 
@@ -215,6 +218,7 @@ export default {
     Grid,
     Shaper,
     Modal,
+    DashboardsIcon,
   },
   data() {
     return {
