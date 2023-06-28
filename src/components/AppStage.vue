@@ -32,7 +32,8 @@
           @click="updateMode(mode)"
           >{{ mode === 'designSystems' ? designSysLabel : mode }}
             <DashboardsIcon v-if="mode === 'dashboards'"  />
-            <AboutIcon v-if="mode === 'about'"  />  
+            <AboutIcon v-if="mode === 'about'"  />
+            <ProtoIcon v-if="mode === 'prototyping'" />
           </a>
       </nav>
 
@@ -211,6 +212,7 @@ import Shaper from './Shaper.vue';
 import Modal from './Modal.vue';
 import DashboardsIcon from './icons/DashboardsIcon.vue';
 import AboutIcon from './icons/AboutIcon.vue';
+import ProtoIcon from './icons/ProtoIcon.vue';
 
 // const colorSet = ['#54478c', '#2c699a', '#0db39e', '#83e377', '#f29e4c'];
 
@@ -224,6 +226,7 @@ export default {
     Modal,
     DashboardsIcon,
     AboutIcon,
+    ProtoIcon,
   },
   data() {
     return {
