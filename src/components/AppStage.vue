@@ -277,7 +277,7 @@ export default {
       ],
       designSysText: 'Built-in consistent branding and functionality...',
       designSysSkills: [
-        'Web Components', 'Stencil', 'Lit', 'Accessibility', 'Semantic Markup',
+        'Web Components', 'Stencil', 'Lit', 'Accessibility', 'Semantic Markup', 'Web APIs', `Shadow DOM`, `CSS Vars`,
       ],
       designSysLinks: [
         {
