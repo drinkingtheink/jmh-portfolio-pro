@@ -70,10 +70,13 @@ export default {
 .cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:6px;}.cls-2{fill:#f29e4c;}.cls-3{fill:#83e377;}.cls-4{fill:#0db39e;}.cls-5{fill:#54478c;}
 
 @keyframes wander1 {
+  12% {
+    transform: translate(32px, -18px);
+  }
   34% {
     transform: translate(-2px, 0);
   }
-  37% {
+  57% {
     transform: translate(12px, -8px);
   }
   100% {
@@ -83,13 +86,25 @@ export default {
 
 @keyframes wander2 {
   34% {
-    transform: translate(-20px, 10px);
+    transform: translate(-20px, -10px);
   }
-  37% {
-    transform: translate(12px, -28px);
+  47% {
+    transform: translate(-42px, 28px);
   }
   100% {
-    transform: translate(10px, 20px);
+    transform: translate(38px, 20px);
+  }
+}
+
+@keyframes wander3 {
+  14% {
+    transform: translate(40px, -20px);
+  }
+  67% {
+    transform: translate(-40px, -28px);
+  }
+  100% {
+    transform: translate(20px, -30px);
   }
 }
 
@@ -97,14 +112,17 @@ export default {
     &:hover {
         .orange-dot {
             animation: wander1 3s ease infinite;
+            animation-direction: alternate-reverse;
         }
 
         .teal-dot {
             animation: wander2 3s ease infinite;
+            animation-direction: alternate-reverse;
         }
 
         .purple-dot {
-            animation: wander1 3s ease reverse infinite;
+            animation: wander3 3s ease infinite;
+            animation-direction: alternate-reverse;
         }
     }
 }
