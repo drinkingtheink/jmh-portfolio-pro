@@ -64,10 +64,10 @@ export default {
 
 <style lang="scss" scoped>
 @keyframes wane {
-    from {
+    0% {
         opacity: 0;
     }
-    to {
+    50% {
         opacity: 1;
     }
 }
