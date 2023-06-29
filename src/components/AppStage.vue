@@ -474,7 +474,7 @@ body {
     text-align: center;
 
     &.top {
-      top: -900px;
+      top: -1340px;
       transform: rotate(45deg);
     }
 
@@ -620,6 +620,7 @@ nav.large-nav {
     &.designSystems {
       svg {
         transform: scale(0.9);
+        margin-top: -10px;
       }
     }
   }

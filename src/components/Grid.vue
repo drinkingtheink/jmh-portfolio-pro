@@ -26,10 +26,11 @@ path {
 }
 
 #slope-grid {
+    display: none;
     path {
-        stroke-dasharray: 6000;
-        stroke-dashoffset: 6000;
-        animation: dash 15s linear alternate;
+        // stroke-dasharray: 6000;
+        // stroke-dashoffset: 6000;
+        // animation: dash 15s linear alternate;
         animation-iteration-count: infinite;
         animation-fill-mode:both;
     }
