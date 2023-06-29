@@ -77,6 +77,7 @@ export default {
             animation-delay: 0.3s;
             animation-direction: backwards;
             animation-fill-mode: backwards;
+            animation-duration: 1s;
         }
     }
 }

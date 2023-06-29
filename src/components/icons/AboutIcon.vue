@@ -109,10 +109,10 @@ export default {
 }
 
 @keyframes wane {
-    from {
+    0% {
         opacity: 0;
     }
-    to {
+    20% {
         opacity: 1;
     }
 }
@@ -138,7 +138,7 @@ export default {
         }
 
         .bubble-top, .bubble-middle, .bubble-bottom {
-            animation: wane 3s ease infinite;
+            animation: wane 10s ease infinite;
         }
 
         .bubble-middle {
