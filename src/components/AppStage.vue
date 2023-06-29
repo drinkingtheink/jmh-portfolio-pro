@@ -147,6 +147,13 @@
             <p>{{ link.about }}</p>
           </section>
 
+          <h3>Other contributions to the Tecton Design System</h3>
+
+          <ul>
+            <li>Rolled out an animation framework via Tecton that allows developers and third-party contributors to use standard animations in their components/experiences</li>
+            <li>Contributed to the color system to expand useful accent colors</li>
+          </ul>
+
           <h2>More on this topic on the way...</h2>
         </div>
       </section>
@@ -732,6 +739,10 @@ nav.large-nav {
       a {
         @include lrgbtn;
       }
+    }
+
+    ul {
+      text-align: left;
     }
   }
 
