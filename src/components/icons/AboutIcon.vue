@@ -7,9 +7,9 @@
             />
             <path class="cls-1" d="m265.81,60.24c-8.7-.05-15.73-7.17-15.69-15.9.04-8.67,7.19-15.73,15.91-15.69,8.68.04,15.72,7.19,15.67,15.91-.05,8.73-7.14,15.73-15.89,15.68Z" />
         </g>
-        <circle class="cls-2" cx="309.5" cy="187.5" r="11.5" />
-        <circle class="cls-4" cx="225.5" cy="109.5" r="11.5" />
-        <circle class="cls-5" cx="303.5" cy="61.5" r="11.5" />
+        <circle class="cls-2 orange-dot" cx="309.5" cy="187.5" r="11.5" />
+        <circle class="cls-4 teal-dot" cx="225.5" cy="109.5" r="11.5" />
+        <circle class="cls-5 purple-dot" cx="303.5" cy="61.5" r="11.5" />
         <g id="word-bubbles">
             <g id="shadow-top">
                 <image
@@ -68,4 +68,44 @@ export default {
 
 <style lang="scss" scoped>
 .cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:6px;}.cls-2{fill:#f29e4c;}.cls-3{fill:#83e377;}.cls-4{fill:#0db39e;}.cls-5{fill:#54478c;}
+
+@keyframes wander1 {
+  34% {
+    transform: translate(-2px, 0);
+  }
+  37% {
+    transform: translate(12px, -8px);
+  }
+  100% {
+    transform: translate(10px, 20px);
+  }
+}
+
+@keyframes wander2 {
+  34% {
+    transform: translate(-20px, 10px);
+  }
+  37% {
+    transform: translate(12px, -28px);
+  }
+  100% {
+    transform: translate(10px, 20px);
+  }
+}
+
+#about-icon {
+    &:hover {
+        .orange-dot {
+            animation: wander1 3s ease infinite;
+        }
+
+        .teal-dot {
+            animation: wander2 3s ease infinite;
+        }
+
+        .purple-dot {
+            animation: wander1 3s ease reverse infinite;
+        }
+    }
+}
 </style>

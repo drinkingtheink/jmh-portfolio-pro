@@ -17,10 +17,10 @@
             />
         </g>
         <line class="cls-1" x1="97" y1="96" x2="210" y2="101" />
-        <rect class="cls-6" x="76.79" y="25.57" width="40.21" height="40.21" />
-        <rect class="cls-5" x="76.79" y="76.2" width="40.21" height="40.21" />
-        <rect class="cls-4" x="76.79" y="126.82" width="40.21" height="40.21" />
-        <rect class="cls-3" x="76.79" y="177.44" width="40.21" height="40.21" />
+        <rect style="animation-delay: 0.1s;" class="cls-6" x="76.79" y="25.57" width="40.21" height="40.21" />
+        <rect style="animation-delay: 0.5s;" class="cls-5" x="76.79" y="76.2" width="40.21" height="40.21" />
+        <rect style="animation-delay: 1s;" class="cls-4" x="76.79" y="126.82" width="40.21" height="40.21" />
+        <rect style="animation-delay: 1.5s;" class="cls-3" x="76.79" y="177.44" width="40.21" height="40.21" />
         <line class="cls-1" x1="117" y1="145" x2="226" y2="126" />
     </svg>
 </template>
@@ -33,4 +33,21 @@ export default {
 
 <style lang="scss" scoped>
 .cls-1{stroke-width:3px;}.cls-1,.cls-2{fill:none;stroke:#fff;stroke-miterlimit:10;}.cls-2{stroke-width:6px;}.cls-3{fill:#f29e4c;}.cls-4{fill:#83e377;}.cls-5{fill:#0db39e;}.cls-6{fill:#54478c;}
+
+@keyframes bulge {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+#proto-icon {
+    &:hover {
+        rect {
+            animation: bulge 3s ease infinite;
+        }
+    }
+}
 </style>
