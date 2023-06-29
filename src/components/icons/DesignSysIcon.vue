@@ -36,15 +36,17 @@
                 d="m174.95,64.72c-2.83,1.71-5.39,3.28-8,4.78-.3.17-.94.04-1.27-.19-11.4-7.82-20.81-17.35-25.91-30.53-2.76-7.15-4.01-14.58-4.18-22.21-.05-2.45,1.05-4,3.23-4.69,2.4-.77,5.04-.13,6.15,1.78.54.92.74,2.16.77,3.26.21,10.15,2.7,19.61,8.31,28.16,4.27,6.5,9.85,11.71,16.09,16.26,1.5,1.09,3.04,2.14,4.81,3.38Z"
             />
         </g>
-        <rect class="cls-3 pill" style="animation-delay: 0.1s;" x="148" y="16.77" width="55" height="7.23" rx="3.27" ry="3.27" />
-        <rect class="cls-3 pill" style="animation-delay: 0.2s;" x="154.99" y="31.49" width="41.01" height="6.55" rx="3.27" ry="3.27" />
-        <rect class="cls-3 pill" style="animation-delay: 0.3s;" x="165.98" y="46.15" width="22.02" height="6.55" rx="3.27" ry="3.27" />
-        <rect class="cls-3 pill" style="animation-delay: 0.4s;" x="150.78" y="224.5" width="55" height="7.23" rx="3.27" ry="3.27" transform="translate(356.56 456.24) rotate(180)" />
-        <rect class="cls-3 pill" style="animation-delay: 0.5s;" x="157.78" y="210.47" width="41.01" height="6.55" rx="3.27" ry="3.27" transform="translate(356.57 427.48) rotate(-180)" />
-        <rect class="cls-3 pill" style="animation-delay: 0.6s;" x="165.78" y="195.81" width="22.02" height="6.55" rx="3.27" ry="3.27" transform="translate(353.57 398.17) rotate(-180)" />
-        <rect class="cls-2 pill" style="animation-delay: 0.7s;" x="152.08" y="120.83" width="55" height="7.23" rx="3.27" ry="3.27" transform="translate(359.17 248.9) rotate(180)" />
-        <rect class="cls-2 pill" style="animation-delay: 0.8s;" x="159.08" y="106.8" width="41.01" height="6.55" rx="3.27" ry="3.27" transform="translate(359.18 220.14) rotate(180)" />
-        <rect class="cls-2 pill" style="animation-delay: 0.9s;" x="167.08" y="92.14" width="22.02" height="6.55" rx="3.27" ry="3.27" transform="translate(356.18 190.83) rotate(180)" />
+        <rect class="cls-3 pill" style="animation-delay: 0.12s;" x="148" y="16.77" width="55" height="7.23" rx="3.27" ry="3.27" />
+        <rect class="cls-3 pill" style="animation-delay: 0.11s;" x="154.99" y="31.49" width="41.01" height="6.55" rx="3.27" ry="3.27" />
+        <rect class="cls-3 pill" style="animation-delay: 0.10s;" x="165.98" y="46.15" width="22.02" height="6.55" rx="3.27" ry="3.27" />
+        <rect class="cls-3 pill" style="animation-delay: 0.9s;" x="150.78" y="224.5" width="55" height="7.23" rx="3.27" ry="3.27" transform="translate(356.56 456.24) rotate(180)" />
+        <rect class="cls-3 pill" style="animation-delay: 0.8s;" x="157.78" y="210.47" width="41.01" height="6.55" rx="3.27" ry="3.27" transform="translate(356.57 427.48) rotate(-180)" />
+        <rect class="cls-3 pill" style="animation-delay: 0.7s;" x="165.78" y="195.81" width="22.02" height="6.55" rx="3.27" ry="3.27" transform="translate(353.57 398.17) rotate(-180)" />
+        <rect class="cls-2 pill" style="animation-delay: 0.6s;" x="152.08" y="120.83" width="55" height="7.23" rx="3.27" ry="3.27" transform="translate(359.17 248.9) rotate(180)" />
+        <rect class="cls-2 pill" style="animation-delay: 0.5s;" x="159.08" y="106.8" width="41.01" height="6.55" rx="3.27" ry="3.27" transform="translate(359.18 220.14) rotate(180)" />
+        <rect class="cls-2 pill" style="animation-delay: 0.4s;" x="167.08" y="92.14" width="22.02" height="6.55" rx="3.27" ry="3.27" transform="translate(356.18 190.83) rotate(180)" />
+        <rect class="cls-2 pill" style="animation-delay: 0.3s;" x="163.01" y="135.78" width="41.01" height="6.55" rx="3.27" ry="3.27" />
+	    <rect class="cls-2 pill" style="animation-delay: 0.2s;" x="174" y="150.44" width="22.02" height="6.55" rx="3.27" ry="3.27" />
         <g id="purple-shadow"><use transform="translate(1 14)" xlink:href="#image" /></g>
         <rect class="cls-5" x="39.3" y="43.23" width="40.21" height="40.21" />
         <g id="teal-shadow"><use transform="translate(0 78)" xlink:href="#image-2" /></g>
@@ -53,6 +55,16 @@
         <rect class="cls-3" x="270.3" y="43.23" width="40.21" height="40.21" />
         <g id="orange-shadow"><use transform="translate(231 78)" xlink:href="#image-2" /></g>
         <rect class="cls-2" x="269.3" y="106.61" width="40.21" height="40.21" />
+        <g class="white-lines">
+            <line style="animation-delay: 0.1s;" class="cls-6" x1="90.5" y1="57.5" x2="132.5" y2="38.5" />
+            <line style="animation-delay: 0.6s;" class="cls-6" x1="91.5" y1="77.5" x2="145.5" y2="79.5" />
+            <line style="animation-delay: 0.3s;" class="cls-6" x1="87.5" y1="120.5" x2="132.5" y2="103.5" />
+            <line style="animation-delay: 0.4s;" class="cls-6" x1="89.5" y1="137.5" x2="133.5" y2="154.5" />
+            <line style="animation-delay: 0.8s;" class="cls-6" x1="261.5" y1="52.5" x2="227.5" y2="34.5" />
+            <line style="animation-delay: 0.2s;" class="cls-6" x1="258.5" y1="71.5" x2="209.5" y2="76.5" />
+            <line style="animation-delay: 0.1s;" class="cls-6" x1="260.5" y1="123.5" x2="227.5" y2="115.5" />
+            <line style="animation-delay: 1s;" class="cls-6" x1="260.5" y1="145.5" x2="211.5" y2="170.5" />
+        </g>
     </svg>
 </template>
 
@@ -81,7 +93,20 @@ export default {
     }
 }
 
+@keyframes wane {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 #design-sys-icon {
+    line {
+        display: none;
+    }
+
     &:hover {
         .pill {
             &.cls-2 {
@@ -92,8 +117,17 @@ export default {
                 animation: verde-wane 2s ease infinite;
             }
         }
+
+        .white-lines {
+            line {
+                animation: wane 1s infinite;
+                display: block;
+            }
+        }
     }
 }
 
 .cls-1{fill:#fff;}.cls-2{fill:#f29e4c;}.cls-3{fill:#83e377;}.cls-4{fill:#0db39e;}.cls-5{fill:#54478c;}
+
+.cls-6{stroke:#fff;stroke-miterlimit:10;}.cls-6{fill:none;}
 </style>
