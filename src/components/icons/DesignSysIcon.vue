@@ -36,15 +36,15 @@
                 d="m174.95,64.72c-2.83,1.71-5.39,3.28-8,4.78-.3.17-.94.04-1.27-.19-11.4-7.82-20.81-17.35-25.91-30.53-2.76-7.15-4.01-14.58-4.18-22.21-.05-2.45,1.05-4,3.23-4.69,2.4-.77,5.04-.13,6.15,1.78.54.92.74,2.16.77,3.26.21,10.15,2.7,19.61,8.31,28.16,4.27,6.5,9.85,11.71,16.09,16.26,1.5,1.09,3.04,2.14,4.81,3.38Z"
             />
         </g>
-        <rect class="cls-3" x="148" y="16.77" width="55" height="7.23" rx="3.27" ry="3.27" />
-        <rect class="cls-3" x="154.99" y="31.49" width="41.01" height="6.55" rx="3.27" ry="3.27" />
-        <rect class="cls-3" x="165.98" y="46.15" width="22.02" height="6.55" rx="3.27" ry="3.27" />
-        <rect class="cls-3" x="150.78" y="224.5" width="55" height="7.23" rx="3.27" ry="3.27" transform="translate(356.56 456.24) rotate(180)" />
-        <rect class="cls-3" x="157.78" y="210.47" width="41.01" height="6.55" rx="3.27" ry="3.27" transform="translate(356.57 427.48) rotate(-180)" />
-        <rect class="cls-3" x="165.78" y="195.81" width="22.02" height="6.55" rx="3.27" ry="3.27" transform="translate(353.57 398.17) rotate(-180)" />
-        <rect class="cls-2" x="152.08" y="120.83" width="55" height="7.23" rx="3.27" ry="3.27" transform="translate(359.17 248.9) rotate(180)" />
-        <rect class="cls-2" x="159.08" y="106.8" width="41.01" height="6.55" rx="3.27" ry="3.27" transform="translate(359.18 220.14) rotate(180)" />
-        <rect class="cls-2" x="167.08" y="92.14" width="22.02" height="6.55" rx="3.27" ry="3.27" transform="translate(356.18 190.83) rotate(180)" />
+        <rect class="cls-3 pill" style="animation-delay: 0.1s;" x="148" y="16.77" width="55" height="7.23" rx="3.27" ry="3.27" />
+        <rect class="cls-3 pill" style="animation-delay: 0.2s;" x="154.99" y="31.49" width="41.01" height="6.55" rx="3.27" ry="3.27" />
+        <rect class="cls-3 pill" style="animation-delay: 0.3s;" x="165.98" y="46.15" width="22.02" height="6.55" rx="3.27" ry="3.27" />
+        <rect class="cls-3 pill" style="animation-delay: 0.4s;" x="150.78" y="224.5" width="55" height="7.23" rx="3.27" ry="3.27" transform="translate(356.56 456.24) rotate(180)" />
+        <rect class="cls-3 pill" style="animation-delay: 0.5s;" x="157.78" y="210.47" width="41.01" height="6.55" rx="3.27" ry="3.27" transform="translate(356.57 427.48) rotate(-180)" />
+        <rect class="cls-3 pill" style="animation-delay: 0.6s;" x="165.78" y="195.81" width="22.02" height="6.55" rx="3.27" ry="3.27" transform="translate(353.57 398.17) rotate(-180)" />
+        <rect class="cls-2 pill" style="animation-delay: 0.7s;" x="152.08" y="120.83" width="55" height="7.23" rx="3.27" ry="3.27" transform="translate(359.17 248.9) rotate(180)" />
+        <rect class="cls-2 pill" style="animation-delay: 0.8s;" x="159.08" y="106.8" width="41.01" height="6.55" rx="3.27" ry="3.27" transform="translate(359.18 220.14) rotate(180)" />
+        <rect class="cls-2 pill" style="animation-delay: 0.9s;" x="167.08" y="92.14" width="22.02" height="6.55" rx="3.27" ry="3.27" transform="translate(356.18 190.83) rotate(180)" />
         <g id="purple-shadow"><use transform="translate(1 14)" xlink:href="#image" /></g>
         <rect class="cls-5" x="39.3" y="43.23" width="40.21" height="40.21" />
         <g id="teal-shadow"><use transform="translate(0 78)" xlink:href="#image-2" /></g>
@@ -63,5 +63,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@keyframes wane {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#design-sys-icon {
+    &:hover {
+        .pill {
+            animation: wane 1s ease infinite;
+        }
+    }
+}
+
 .cls-1{fill:#fff;}.cls-2{fill:#f29e4c;}.cls-3{fill:#83e377;}.cls-4{fill:#0db39e;}.cls-5{fill:#54478c;}
 </style>
