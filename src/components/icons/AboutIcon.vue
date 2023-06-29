@@ -71,7 +71,7 @@ export default {
 
 @keyframes wander1 {
   12% {
-    transform: translate(32px, -18px);
+    transform: translate(3px, -8px);
   }
   34% {
     transform: translate(-2px, 0);
@@ -80,31 +80,31 @@ export default {
     transform: translate(12px, -8px);
   }
   100% {
-    transform: translate(10px, 20px);
+    transform: translate(10px, 2px);
   }
 }
 
 @keyframes wander2 {
   34% {
-    transform: translate(-20px, -10px);
+    transform: translate(-10px, 0);
   }
   47% {
-    transform: translate(-42px, 28px);
+    transform: translate(-22px, 8px);
   }
   100% {
-    transform: translate(38px, 20px);
+    transform: translate(18px, 20px);
   }
 }
 
 @keyframes wander3 {
   14% {
-    transform: translate(40px, -20px);
+    transform: translate(10px, -20px);
   }
   67% {
-    transform: translate(-40px, -28px);
+    transform: translate(-4px, -8px);
   }
   100% {
-    transform: translate(20px, -30px);
+    transform: translate(20px, -3px);
   }
 }
 
@@ -112,17 +112,20 @@ export default {
     &:hover {
         .orange-dot {
             animation: wander1 3s ease infinite;
-            animation-direction: alternate-reverse;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
         }
 
         .teal-dot {
             animation: wander2 3s ease infinite;
-            animation-direction: alternate-reverse;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
         }
 
         .purple-dot {
             animation: wander3 3s ease infinite;
             animation-direction: alternate-reverse;
+            animation-fill-mode: forwards;
         }
     }
 }
