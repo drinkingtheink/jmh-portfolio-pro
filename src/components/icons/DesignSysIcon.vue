@@ -63,19 +63,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@keyframes wane {
+@keyframes verde-wane {
     0% {
-        opacity: 0;
+        fill: white;
     }
     50% {
-        opacity: 1;
+        fill: #83e377;
+    }
+}
+
+@keyframes orange-wane {
+    0% {
+        fill: white;
+    }
+    50% {
+        fill: #f29e4c;
     }
 }
 
 #design-sys-icon {
     &:hover {
         .pill {
-            animation: wane 1s ease infinite;
+            &.cls-2 {
+                animation: orange-wane 2s ease infinite;
+            }
+
+            &.cls-3 {
+                animation: verde-wane 2s ease infinite;
+            }
         }
     }
 }

@@ -39,14 +39,14 @@ export default {
         transform: scale(0.8);
     }
     to {
-        transform: scale(1.1);
+        transform: scale(1);
     }
 }
 
 #proto-icon {
     &:hover {
         rect {
-            animation: bulge 3s ease infinite;
+            animation: bulge 3s ease-out infinite;
         }
     }
 }
