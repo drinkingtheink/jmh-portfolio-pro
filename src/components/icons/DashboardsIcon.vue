@@ -61,6 +61,9 @@ export default {
 }
 
 #dashboards-icon {
+    * {
+        transition: all 0.2s;
+    }
     &:hover {
         transform: translateY(-10px);
 
