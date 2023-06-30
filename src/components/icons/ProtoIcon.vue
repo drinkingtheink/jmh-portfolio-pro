@@ -55,11 +55,11 @@ export default {
 #proto-icon {
     &:hover {
         rect {
-            animation: bulge 3s ease-out infinite;
+            animation: bulge 3s ease-in infinite;
         }
 
         line {
-            animation: wane 2s linear infinite;
+            animation: wane 3s linear infinite;
         }
     }
 }
