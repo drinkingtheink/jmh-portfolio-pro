@@ -17,6 +17,9 @@
         </transition-group>
 
         <button class="redraw-shapes" @click="shapeUp()">Redraw</button>
+        <section class="timing-bar-wrapper">
+            <div class="timing-bar"></div>
+        </section>
     </div>
 </template>
 
@@ -25,6 +28,8 @@ import Circle from './shapes/Circle.vue';
 import Triangle from './shapes/Triangle.vue';
 
 const colorSet = ['#54478c', '#2c699a', '#0db39e', '#83e377', '#f29e4c'];
+
+const aniLength = 10000;
 
 export default {
     name: 'Shaper',
@@ -49,7 +54,7 @@ export default {
 
         this.interval = setInterval(() => {
             this.shapeUp();
-        }, 10000);
+        }, aniLength);
     },
     watch: {
         createShapes() {
@@ -157,6 +162,15 @@ export default {
 </script>
 
 <style lang="scss">
+@keyframes spread {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
+
 @keyframes spin {
   from {
     transform:rotate(0deg);
@@ -213,6 +227,25 @@ export default {
         position: absolute;
         right: 4rem;
         font-size: 70%;
+    }
+
+    .timing-bar-wrapper {
+        width: 60px;
+        padding: 4px;
+        background-color: black;
+        position: absolute;
+        right: 4rem;
+        top: 2rem;
+        border-radius: 10px;
+
+        .timing-bar {
+            background-color: lightsalmon;
+            height: 1px;
+            border-radius: 10px;
+            margin-top: -1px;
+            animation: spread 10s linear 0.4s infinite forwards;
+            transition: all 0.2s;
+        }
     }
 }
 
