@@ -126,19 +126,19 @@ export default {
         }
 
         .teal-dot {
-            animation: wander2 3s ease infinite;
+            animation: wander2 2s ease infinite;
             animation-direction: alternate;
             animation-fill-mode: forwards;
         }
 
         .purple-dot {
-            animation: wander3 3s ease infinite;
+            animation: wander3 4s ease infinite;
             animation-direction: alternate-reverse;
             animation-fill-mode: forwards;
         }
 
         .bubble-top, .bubble-middle, .bubble-bottom {
-            animation: wane 10s ease infinite;
+            animation: wane 5s ease infinite;
         }
 
         .bubble-middle {
