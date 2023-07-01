@@ -38,8 +38,8 @@
           </a>
       </nav>
 
+      <a name="prototyping" />
       <section class="panel prototyping">
-        <a name="prototyping" />
         <div class="left-pane">
           <h2>Prototyping</h2>
           <p>{{ protoText }}</p>
@@ -80,8 +80,8 @@
         </div>
       </section>
 
+      <a name="dashboards" />
       <section class="panel dashboards">
-        <a name="dashboards" />
         <div class="left-pane">
           <h2>Dashboards/Data Viz</h2>
           <p>{{ dashText }}</p>
@@ -123,10 +123,10 @@
             <p>This app helps users diagnose their own Master Data Management Program efficiency and get feedback on performance and insight through a series of questions. A few different charts help users understand their MDM Program in greater detail.</p>
           </section>
         </div>
-      </section>
+      </section> 
 
+      <a name="designSystems" />
       <section class="panel design-systems">
-        <a name="designSystems" />
         <div class="left-pane">
           <h2>Design Systems</h2>
           <p>{{ designSysText }}</p>
@@ -169,9 +169,8 @@
       </div>
     </main>
 
+    <a name="about" />
     <section class="about-section">
-      <a name="about" />
-
       <main>
         <div class="left-about">
           <h2>About Me</h2>
