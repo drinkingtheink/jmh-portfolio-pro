@@ -801,6 +801,7 @@ nav.large-nav {
 .img-gallery {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
 
   img {
     max-width: 45%;
