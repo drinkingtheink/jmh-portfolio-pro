@@ -1,8 +1,11 @@
 <template>
   <div class="app-stage">
+    <a name="top" />
     <div class="color-morph top" />
     <header class="app">
-      <JHMonogram class="jmh" />
+      <a href="#top" class="top-link">
+        <JHMonogram class="jmh" />
+      </a>
       <nav class="top">
         <a 
           v-for="mode in modeOptions" 
@@ -288,7 +291,7 @@ export default {
         },
         {
           name: 'Illustration Library Branding at Q2 - 2022',
-          subtitle: 'Allowing end users to select colors for their own branded illustrations',
+          subtitle: 'Allowing users to configure their own branded illustrations',
           bgImg: 'https://www.drinkingtheink.com/banners/svg-brand-banner.png',
           about: 'In allowing Financial Institutions to white label their own Online Banking experience, we increased their ability to distinguish themselves in their market with vector illustrations they could configure on their own to stand out or blend into their UIs.',
           href: 'https://icon-playground.netlify.app/',
@@ -911,5 +914,9 @@ button {
 .modal-fade-enter-active,
 .modal-fade-leave-active {
   transition: opacity .5s ease;
+}
+
+.top-link {
+  background: transparent !important;
 }
 </style>
