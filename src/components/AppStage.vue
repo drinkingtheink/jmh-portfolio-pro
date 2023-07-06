@@ -157,8 +157,6 @@
             <li>Contributed to core features enabling third-party developers to create responsive experiences via our SDK</li>
             <li>Wrote documentation on how to create content blocks for display in our Composable Dashboard</li>
           </ul>
-
-          <h2>More on this topic on the way...</h2>
         </div>
       </section>
 
@@ -754,6 +752,11 @@ nav.large-nav {
 
     ul {
       text-align: left;
+
+      li {
+        margin: 1rem 0 0.5rem 0;
+        line-height: 1.25;
+      }
     }
   }
 
@@ -801,7 +804,7 @@ nav.large-nav {
 
 @mixin imgGallery {
   transition: all 0.2s;
-  border: 5px solid rgba(0, 0, 0, 0);
+  border: 5px solid rgba(0, 0, 0, 0.2);
 
   &:hover {
     border-color: $sheerBg;
