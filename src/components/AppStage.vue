@@ -153,8 +153,9 @@
           <h3>Other contributions to the Tecton Design System</h3>
 
           <ul>
-            <li>Rolled out an animation framework via Tecton that allows developers and third-party contributors to use standard animations in their components/experiences</li>
             <li>Contributed to the color system to expand useful accent colors</li>
+            <li>Contributed to core features enabling third-party developers to create responsive experiences via our SDK</li>
+            <li>Wrote documentation on how to create content blocks for display in our Composable Dashboard</li>
           </ul>
 
           <h2>More on this topic on the way...</h2>
@@ -288,6 +289,14 @@ export default {
           about: 'Can one build a truly accessible carousel? Probably not since by definition some content is hidden. But our customers demanded it and we gave it our best shot.',
           href: 'https://tecton.q2developer.com/ui/q2-carousel',
           imgSrc: 'https://i.ibb.co/gFFkfjc/q2-carousel-demo.gif',
+        },
+        {
+          name: 'Animation Standards via Tecton at Q2 - 2022',
+          subtitle: 'Allowing developers to integrate consistent motion in their UIs',
+          bgImg: '../../designSystems/anim-standards.png',
+          about: 'We wanted to modernize our UI by adding motion, but we wanted to avoid ad hoc animations across different teams. To maintain quality and consistency, we introduced animation standards via our Tecton Design System.',
+          href: 'https://codepen.io/drinkingtheink/pen/XWyedvK',
+          imgSrc: 'https://i.ibb.co/2NzvhdN/animation-standards.gif',
         },
         {
           name: 'Illustration Library Branding at Q2 - 2022',
