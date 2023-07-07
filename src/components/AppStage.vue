@@ -321,6 +321,11 @@ export default {
         `"After a certain high level of technical skill is achieved science and art tend to coalesce in aesthetics, plasticity, and form. The greatest scientists are artists as well."\n  - Albert Einstein`,
         '"Any sufficiently advanced technology is indistinguishable from magic." - Arthur C. Clarke',
         `"The art challenges the technology, and the technology inspires the art." - John Lasseter`,
+        `“It doesn't stop being magic just because you know how it works.” ― Terry Pratchett`,
+        `“Technology is the campfire around which we tell our stories.” ― Laurie Anderson`,
+        `“Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space.” ― Edward R. Tufte`,
+        `"Designing a product is designing a relationship.” ― Steve Rogers`,
+        `“To design is to communicate clearly by whatever means you can control or master.” ― Milton Glaser`,
       ]
       return quotes;
     },
