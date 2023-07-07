@@ -373,7 +373,6 @@ export default {
 
       galleryImg.forEach((img) => {
         img.addEventListener('click', () => {
-          console.dir(img);
           this.activeImg = img;
           this.openModal = true;
           this.imgColl = [...img.parentElement.children].filter((img) => img.nodeName && img.nodeName === 'IMG');
