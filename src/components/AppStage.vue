@@ -161,14 +161,11 @@
       </section>
 
       <section class="bottom-shaper-wrapper">
+        <p>{{ quote }}</p>
         <div class="shaper-ready">
           <Shaper class="shaper-stage bottom" />
         </div>
       </section>
-
-      <div class="grid-display bottom">
-        <Grid />
-      </div>
     </main>
 
     <a name="about" />
@@ -193,10 +190,6 @@
         </div>
       </main>
     </section>
-
-    <div class="grid-display top">
-      <Grid />
-    </div>
 
     <div class="color-morph bottom" />
   </div>
@@ -312,9 +305,21 @@ export default {
       designSysLabel: 'Design Systems',
       activeImg: null,
       imgColl: [],
+      quote: '',
     }
   },
   computed: {
+    quotes() {
+      const quotes = [
+        'Anytime I solve a problem with CSS someone else would have used JS to fix, I level up.',
+        'Using the Aesthetic-Usability Effect to my advantage for over a decade.',
+        '“Simplicity is about subtracting the obvious and adding the meaningful.” ― John Maeda,',
+        '“Design can be art. Design can be aesthetics. Design is so simple, that\'s why it is so complicated.” ― Paul Rand',
+        '"Clutter and confusion are failures of design, not attributes of information.” ― Edward R. Tufte',
+        '"After a certain high level of technical skill is achieved science and art tend to coalesce in aesthetics, plasticity, and form. The greatest scientists are artists as well." - Albert Einstein'
+      ]
+      return quotes;
+    },
     matchingLinkIndexInColl() {
       let linkMatch = null;
 
@@ -335,6 +340,7 @@ export default {
     },
   },
   mounted() {
+    this.getQuote();
     this.makeImgsClickable();
 
     document.addEventListener('keydown', (event) => {
@@ -344,6 +350,10 @@ export default {
           this.activeImg = this.imgColl[this.matchingLinkIndexInColl - 1];
         }
     });
+
+    this.interval = setInterval(() => {
+        this.getQuote();
+    }, 10000);
   },
   methods: {
     updateMode(mode) {
@@ -368,6 +378,9 @@ export default {
       this.openModal = false;
       this.activeImg = null;
       this.imgColl = [];
+    },
+    getQuote() {
+      this.quote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
     },
   }
 }
@@ -800,6 +813,20 @@ nav.large-nav {
 
 .bottom-shaper-wrapper {
   height: 15rem;
+  position: relative;
+
+  p {
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+    font-size: 2rem;
+    position: absolute;
+    bottom: 50%;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 700px;
+  }
 }
 
 @mixin imgGallery {
