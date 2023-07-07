@@ -318,7 +318,7 @@ export default {
         `“Simplicity is about subtracting the obvious and adding the meaningful.” \n ― John Maeda`,
         `“Design can be art. Design can be aesthetics. Design is so simple, that\'s why it is so complicated.” \n  ― Paul Rand`,
         `"Clutter and confusion are failures of design, not attributes of information.”\n  ― Edward R. Tufte`,
-        `"After a certain high level of technical skill is achieved science and art tend to coalesce in aesthetics, plasticity, and form. The greatest scientists are artists as well."\n  - Albert Einstein`,
+        `"...Science and art tend to coalesce in aesthetics, plasticity, and form. The greatest scientists are artists as well."\n  - Albert Einstein`,
         '"Any sufficiently advanced technology is indistinguishable from magic." - Arthur C. Clarke',
         `"The art challenges the technology, and the technology inspires the art." - John Lasseter`,
         `“It doesn't stop being magic just because you know how it works.” ― Terry Pratchett`,
