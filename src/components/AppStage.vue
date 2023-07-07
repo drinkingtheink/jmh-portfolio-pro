@@ -161,7 +161,9 @@
       </section>
 
       <section class="bottom-shaper-wrapper">
-        <p>{{ quote }}</p>
+        <transition name="modal-fade">
+          <p class="quote">{{ quote }}</p>
+        </transition>
         <div class="shaper-ready">
           <Shaper class="shaper-stage bottom" />
         </div>
@@ -313,10 +315,12 @@ export default {
       const quotes = [
         'Anytime I solve a problem with CSS someone else would have used JS to fix, I level up.',
         'Using the Aesthetic-Usability Effect to my advantage for over a decade.',
-        '“Simplicity is about subtracting the obvious and adding the meaningful.” ― John Maeda,',
-        '“Design can be art. Design can be aesthetics. Design is so simple, that\'s why it is so complicated.” ― Paul Rand',
-        '"Clutter and confusion are failures of design, not attributes of information.” ― Edward R. Tufte',
-        '"After a certain high level of technical skill is achieved science and art tend to coalesce in aesthetics, plasticity, and form. The greatest scientists are artists as well." - Albert Einstein'
+        `“Simplicity is about subtracting the obvious and adding the meaningful.” \n ― John Maeda`,
+        `“Design can be art. Design can be aesthetics. Design is so simple, that\'s why it is so complicated.” \n  ― Paul Rand`,
+        `"Clutter and confusion are failures of design, not attributes of information.”\n  ― Edward R. Tufte`,
+        `"After a certain high level of technical skill is achieved science and art tend to coalesce in aesthetics, plasticity, and form. The greatest scientists are artists as well."\n  - Albert Einstein`,
+        '"Any sufficiently advanced technology is indistinguishable from magic." - Arthur C. Clarke',
+        `"The art challenges the technology, and the technology inspires the art." - John Lasseter`,
       ]
       return quotes;
     },
@@ -821,11 +825,12 @@ nav.large-nav {
     font-size: 2rem;
     position: absolute;
     bottom: 50%;
-    top: 20%;
+    top: 12%;
     left: 0;
     right: 0;
     margin: auto;
     max-width: 700px;
+    line-height: 1.4;
   }
 }
 
