@@ -326,6 +326,11 @@ export default {
         `“Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time and in the smallest space.” ― Edward R. Tufte`,
         `"Designing a product is designing a relationship.” ― Steve Rogers`,
         `“To design is to communicate clearly by whatever means you can control or master.” ― Milton Glaser`,
+        `“The chief function of color should be to serve expression.” – Henri Matisse`,
+        `“Mere color, unspoiled by meaning, and unallied with definite form, can speak to the soul in a thousand different ways.” – Oscar Wilde`,
+        `“There is a logic of colors, and it is with this alone, and not with the logic of the brain, that the painter should conform.” – Paul Cezanne`,
+        `“Why do two colors, put one next to the other, sing?” – Pablo Picasso`,
+        `“The rhythm of relations of color and size makes the absolute appear in the relativity of time and space.” – Piet Mondrian`,
       ]
       return quotes;
     },
