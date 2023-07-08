@@ -313,7 +313,7 @@ export default {
   computed: {
     quotes() {
       const quotes = [
-        'Anytime I solve a problem with CSS someone else would have used JS to fix, I gain + 1K XP.',
+        'Solving a problem with CSS someone else would have used JS to fix is my power move.',
         'Using the Aesthetic-Usability Effect to my advantage for over a decade.',
         `“Simplicity is about subtracting the obvious and adding the meaningful.” \n ― John Maeda`,
         `“Design can be art. Design can be aesthetics. Design is so simple, that\'s why it is so complicated.” \n  ― Paul Rand`,
