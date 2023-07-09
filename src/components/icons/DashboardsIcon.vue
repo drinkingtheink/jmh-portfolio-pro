@@ -11,10 +11,10 @@
         <rect class="cls-7 bg-screen" x="25.99" y="61.69" width="149.53" height="99.68" rx="12.48" ry="12.48" />
         <rect class="cls-1 dashboard" x="73.73" y="43" width="229.45" height="152.97" rx="11.26" ry="11.26" />
         <g id="bar-chart">
-            <rect id="bar-1" class="cls-5" x="198.72" y="77.04" width="10.26" height="27.98" />
-            <rect id="bar-3" class="cls-3" x="236.65" y="66.78" width="10.26" height="38.24" />
-            <rect id="bar-2" class="cls-4" x="217.68" y="52.79" width="10.26" height="52.23" />
-            <rect id="bar-end" class="cls-5" x="255.61" y="47.19" width="10.26" height="57.83" />
+            <rect id="bar-1" class="cls-5" x="198.72" y="77.04" width="10.26" height="27.98" style="animation-delay: 0.1s;" />
+            <rect id="bar-3" class="cls-3" x="236.65" y="66.78" width="10.26" height="38.24" style="animation-delay: 0.2s;" />
+            <rect id="bar-2" class="cls-4" x="217.68" y="52.79" width="10.26" height="52.23" style="animation-delay: 0.3s;" />
+            <rect id="bar-end" class="cls-5" x="255.61" y="47.19" width="10.26" height="57.83" style="animation-delay: 0.4s;" />
         </g>
         <rect class="cls-6" x="110.58" y="126.94" width="58.76" height="6.53" />
         <rect class="cls-6" x="95.94" y="127.41" width="6.7" height="6.46" />
@@ -60,6 +60,21 @@ export default {
     }
 }
 
+@keyframes morph {
+  0% {
+    transform: scaleY(1)
+  }
+  25% {
+    transform: scaleY(0.3)
+  }
+  50% {
+    transform: scaleY(0.7)
+  }
+  75% {
+    transform: scaleY(1)
+  }
+}
+
 #dashboards-icon {
     * {
         transition: all 0.2s;
@@ -78,6 +93,13 @@ export default {
             animation-direction: backwards;
             animation-fill-mode: backwards;
             animation-duration: 1s;
+        }
+
+        #bar-chart {
+            rect {
+                animation: morph 3s infinite alternate;
+                transform-origin: center;
+            }
         }
     }
 }
