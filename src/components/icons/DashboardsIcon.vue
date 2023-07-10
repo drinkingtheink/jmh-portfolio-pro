@@ -61,16 +61,10 @@ export default {
 }
 
 @keyframes morph {
-  0% {
-    transform: scaleY(1)
-  }
   25% {
     transform: scaleY(0.3)
   }
-  50% {
-    transform: scaleY(0.7)
-  }
-  75% {
+  95% {
     transform: scaleY(1)
   }
 }
@@ -98,7 +92,7 @@ export default {
         #bar-chart {
             rect {
                 animation: morph 3s infinite alternate;
-                transform-origin: center;
+                transform-origin: 100%;
             }
         }
     }
