@@ -419,7 +419,7 @@ $boxShadow: 0px 3px 5px 3px rgba(0,0,0,0.36);
 $boxShadowDark: 0px 3px 10px 3px rgba(0,0,0,0.8);
 
 :root {
-  --white: #fff;
+  --white: #eaeaea;
   --bgColor: var(--white);
   --darkGrey: #222;
   --fontColor: var(--darkGrey);
@@ -699,6 +699,10 @@ nav.large-nav {
   border-radius: 50%;
   overflow: hidden;
   z-index: 10;
+
+  @media screen and (prefers-color-scheme: dark) {
+    border-color: rgba(0, 0, 0, 0.8);
+  }
 }
 
 .intro {
@@ -730,6 +734,12 @@ nav.large-nav {
     font-size: calc(0.75rem + 1vw);
     position: relative;
     text-align: left;
+
+    @media screen and (prefers-color-scheme: dark) {
+      h2 {
+        color: palegreen;
+      }
+    }
 
     p {
       line-height: 1.25;
@@ -894,6 +904,10 @@ nav.large-nav {
   &:hover {
     border-color: $sheerBg;
     cursor: pointer;
+
+    @media screen and (prefers-color-scheme: dark) {
+      border-color: rgba(palegreen, 0.8);
+    }
   }
 }
 
