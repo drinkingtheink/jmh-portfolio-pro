@@ -178,9 +178,9 @@
 
           <p>Welcome to a glimpse into my software development skill set. I'm passionate about ideating, designing, and developing experiences that seamlessly blend aesthetics with usability. As a software developer, I believe in harnessing the power of interfaces that not only look beautiful but also provide practical utility to users.</p> 
           
-          <p>The great Arthur C. Clarke once said, 'Any sufficiently advanced technology is indistinguishable from magic.' Inspired by this quote, I strive to create software that captivates users and simplifies their lives, making technology feel like a magical experience. Explore my portfolio and witness the fusion of creativity, functionality, and user-centric design in my projects.</p>
+          <p>The great Arthur C. Clarke once said, 'Any sufficiently advanced technology is indistinguishable from magic.' Inspired by this quote, I strive to create software that captivates users and simplifies their lives, and hopefully makes technology feel at least somewhat like a magical experience. Explore my portfolio and witness the fusion of creativity, functionality, and user-centric design in my projects.</p>
 
-          <p>Currently I write features in Fintech for millions of end users while contributing to a Design System used by thousands of devs. If I'm not doing that, I'm coaching my kids in soccer or in the recording studio.</p>
+          <p>Currently I write features in Fintech for millions of end users while contributing to a Design System used by thousands of devs. If I'm not doing that, I'm coaching my kids in soccer, supporting my local football club, making generative art or in the recording studio.</p>
 
           <p>Thanks so much for visiting. Cheers. - J(a)SON </p>
         </div>
