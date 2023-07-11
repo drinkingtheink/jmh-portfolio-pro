@@ -31,6 +31,9 @@ $col5:#f29e4c;
   20% {
     fill: $col4;
   }
+  30% {
+    fill: lightsalmon;
+  }
   40% {
     fill: $col3;
   }

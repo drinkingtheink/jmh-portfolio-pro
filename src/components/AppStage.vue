@@ -748,8 +748,14 @@ nav.large-nav {
     }
 
     svg {
-      padding: 2rem 2rem 2rem 0;
-      margin: 0 auto;
+      margin: 1rem auto 0 auto;
+      background-color: $sheerBg;
+      max-width: 250px;
+      border-radius: 20px;
+
+      @media screen and (prefers-color-scheme: dark) {
+        background-color: transparent;
+      }
     }
 
     p {
@@ -791,7 +797,7 @@ nav.large-nav {
   .right-pane {
     width: 70%;
     padding-left: 2rem;
-    height: 37rem;
+    height: 42rem;
     overflow-y: scroll;
 
     h3 {
@@ -855,6 +861,18 @@ nav.large-nav {
 
     @media screen and (prefers-color-scheme: dark) {
       background: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  &.prototyping {
+    .right-pane {
+      height: 44rem;
+    }
+  }
+
+  &.dashboards {
+    .right-pane {
+      height: 51rem;
     }
   }
 }
