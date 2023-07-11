@@ -50,6 +50,8 @@
           <section class="skills">
             <span v-for="skill in protoSkills" :key="skill">{{ skill }}</span>
           </section>
+
+          <ProtoIcon />
         </div>
         <div class="right-pane">
           <h3>Wireframes for Project at Dun & Bradstreet - 2019</h3>
@@ -92,6 +94,8 @@
           <section class="skills">
             <span v-for="skill in dashSkills" :key="skill">{{ skill }}</span>
           </section>
+
+          <DashboardsIcon />
         </div>
         <div class="right-pane">
           <section class="img-gallery-alt">
@@ -137,6 +141,8 @@
           <section class="skills">
             <span v-for="skill in designSysSkills" :key="skill">{{ skill }}</span>
           </section>
+
+          <DesignSysIcon />
         </div>
         <div class="right-pane">
           <section v-for="link in designSysLinks" :key="link.name" class="functional-app img-gallery-alt">
@@ -739,6 +745,11 @@ nav.large-nav {
       h2 {
         color: palegreen;
       }
+    }
+
+    svg {
+      padding: 2rem 2rem 2rem 0;
+      margin: 0 auto;
     }
 
     p {
