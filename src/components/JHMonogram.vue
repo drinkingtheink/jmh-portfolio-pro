@@ -19,11 +19,39 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+$col3: #0db39e;
+$col4: #83e377;
+$col5:#f29e4c;
+
+@keyframes colorGrad {
+  0% {
+    fill: $col4;
+  }
+  20% {
+    fill: $col4;
+  }
+  40% {
+    fill: $col3;
+  }
+  60% {
+    fill: $col4;
+  }
+  80% {
+    fill: white;
+  }
+}
 
 .mono-cls-1{fill: white;} 
 
 .JH-monogram * {
     transition: all .3s;
+    animation: colorGrad 20s alternate infinite;
+}
+
+.JH-monogram:hover {
+    .mono-cls-1 {
+        fill: white !important;
+    }
 }
 </style>
