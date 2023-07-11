@@ -176,9 +176,12 @@
         <div class="left-about">
           <h2>About Me</h2>
 
-          <p>I've been working in software for over a decade, where Art & Science meet. Comfortable in web/software/application design and development, I am a Creative Technologist that loves to use browsers/UIs as a vehicle for user narratives. Forever interested in the person/machine interaction.</p>
-            
-          <p>I'm a Staff Software Engineer at Q2 where we strengthen communities by providing modern banking solutions for community and independent banks and credit unions. I write core features for millions of users across multiple teams and in multiple repos.</p>
+          <p>Welcome to my software development portfolio. I'm passionate about ideating, designing, and developing experiences that seamlessly blend aesthetics with usability. As a software developer, I believe in harnessing the power of interfaces that not only look beautiful but also provide practical utility to users.</p> 
+          
+          <p>The great Arthur C. Clarke once said, 'Any sufficiently advanced technology is indistinguishable from magic.' Inspired by this quote, I strive to create software that captivates users and simplifies their lives, making technology feel like a magical experience. Explore my portfolio and witness the fusion of creativity, functionality, and user-centric design in my projects.</p>
+
+          <p>Currently I write features in Fintech for millions of end users while contributing to a Design System used by thousands of devs. If I'm not doing that, I'm coaching my kids in soccer or in the recording studio.</p>
+
           <p>Thanks so much for visiting. Cheers. - J(a)SON </p>
         </div>
         <div class="right-about">
