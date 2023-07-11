@@ -176,7 +176,7 @@
         <div class="left-about">
           <h2>About Me</h2>
 
-          <p>Welcome to my software development portfolio. I'm passionate about ideating, designing, and developing experiences that seamlessly blend aesthetics with usability. As a software developer, I believe in harnessing the power of interfaces that not only look beautiful but also provide practical utility to users.</p> 
+          <p>Welcome to a glimpse into my software development skill set. I'm passionate about ideating, designing, and developing experiences that seamlessly blend aesthetics with usability. As a software developer, I believe in harnessing the power of interfaces that not only look beautiful but also provide practical utility to users.</p> 
           
           <p>The great Arthur C. Clarke once said, 'Any sufficiently advanced technology is indistinguishable from magic.' Inspired by this quote, I strive to create software that captivates users and simplifies their lives, making technology feel like a magical experience. Explore my portfolio and witness the fusion of creativity, functionality, and user-centric design in my projects.</p>
 
@@ -969,6 +969,7 @@ nav.large-nav {
     .right-about {
       width: 40%;
       padding-left: 2rem;
+      margin-top: 4rem;
 
       a {
         display: block;
