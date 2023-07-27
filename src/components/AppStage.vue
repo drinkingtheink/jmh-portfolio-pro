@@ -562,11 +562,20 @@ body {
     &.top {
       top: -1340px;
       transform: rotate(45deg);
+
+      @media (max-width: $maxWidth) {
+        top: -460px;
+      }
     }
 
     &.bottom {
       top: 2000px;
       transform: rotate(200deg);
+    }
+
+    @media (max-width: $maxWidth) {
+      height: 460px;
+      width: 600px;
     }
   }
 }
