@@ -1,5 +1,8 @@
 <template>
   <div class="app-stage">
+    <div class="mobile-overlay">
+      <p>This site is best experienced on desktop.</p>
+    </div>
     <a name="top" />
     <div class="color-morph top" />
     <header class="app">
@@ -424,6 +427,8 @@ $appWidth: 1200px;
 $boxShadow: 0px 3px 5px 3px rgba(0,0,0,0.36);
 $boxShadowDark: 0px 3px 10px 3px rgba(0,0,0,0.8);
 
+$maxWidth: 930px;
+
 :root {
   --white: #eaeaea;
   --bgColor: var(--white);
@@ -576,6 +581,10 @@ header.app {
   animation-duration: 10s;
   animation-direction: alternate-reverse;
 
+  @media (max-width: $maxWidth) {
+    display: none;
+  }
+
   a {
     border: none;
     background: $sheerBg;
@@ -658,6 +667,10 @@ nav.large-nav {
   position: relative;
   z-index: 9;
 
+  @media (max-width: $maxWidth) {
+    display: none;
+  }
+
   a {
     width: 24%;
     height: 200px;
@@ -733,6 +746,10 @@ nav.large-nav {
   position: relative;
   z-index: 9;
   color: var(--fontColor);
+
+  @media (max-width: $maxWidth) {
+    display: none;
+  }
 
   .left-pane {
     padding: 0 2rem;
@@ -974,6 +991,10 @@ nav.large-nav {
   box-shadow: $boxShadow;
   margin-top: -5rem;
   margin-left: -10px;
+
+  @media (max-width: $maxWidth) {
+    display: none;
+  }
 
   .me.bottom {
     position: absolute;
