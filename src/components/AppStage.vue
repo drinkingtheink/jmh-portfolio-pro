@@ -23,7 +23,7 @@
           <span>I'm an experienced Software Engineer && UI/UX/U∞ Designer from Austin, TX. I like to design it and I like to make it work beautifully. And for as many people as possible. Thanks for stopping by.</span>
         
           <p class="small-screen">
-            Apologies, but this site is best viewed on a desktop. I trust the effort will be worth your while!
+            This site is best viewed on a desktop. 
           </p>
         </div>
 
@@ -445,6 +445,7 @@ body {
   @media (max-width: $maxWidth) {
     width: 100vw;
     overflow-x: hidden;
+    overflow-y: hidden !important;
     padding-bottom: 0;
   }
 }
@@ -648,7 +649,7 @@ $textShad: 1px 2px 2px rgba(0,0,0,0.3);
     @media (max-width: $maxWidth) {
       width: 100%;
       text-align: center;
-      margin: 0 auto;
+      margin: 2rem auto 0 auto;
       font-size: 1.75rem;
       max-width: 75%;
     }
@@ -670,6 +671,10 @@ $textShad: 1px 2px 2px rgba(0,0,0,0.3);
 
     .small-screen {
       display: none;
+      background-color: white;
+      box-shadow: $boxShadow;
+      padding: 1rem;
+      color: $col2;
 
       @media (max-width: $maxWidth) {
         display: block;
