@@ -1,8 +1,5 @@
 <template>
   <div class="app-stage">
-    <div class="mobile-overlay">
-      <p>This site is best experienced on desktop.</p>
-    </div>
     <a name="top" />
     <div class="color-morph top" />
     <header class="app">
@@ -24,6 +21,10 @@
         <div class="intro shaper-ready">
           <h2>Hi, I'm <strong>Jason</strong></h2>
           <span>I'm an experienced Software Engineer && UI/UX/U∞ Designer from Austin, TX. I like to design it and I like to make it work beautifully. And for as many people as possible. Thanks for stopping by.</span>
+        
+          <p class="small-screen">
+            Apologies, but this site is best viewed on a desktop. I trust the effort will be worth your while!
+          </p>
         </div>
 
         <Shaper class="shaper-stage" />
@@ -422,6 +423,7 @@ $col4: #83e377;
 $col5:#f29e4c;
 $col6: #06365c;
 
+
 $appWidth: 1200px;
 
 $boxShadow: 0px 3px 5px 3px rgba(0,0,0,0.36);
@@ -439,6 +441,12 @@ $maxWidth: 930px;
 body {
   background-color: $col2;
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%2306365c' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+  @media (max-width: $maxWidth) {
+    width: 100vw;
+    overflow-x: hidden;
+    padding-bottom: 0;
+  }
 }
 
 .slide-fade-enter-active {
@@ -623,6 +631,11 @@ $textShad: 1px 2px 2px rgba(0,0,0,0.3);
   padding: 0 100px;
   margin: 2rem 0;
 
+  @media (max-width: $maxWidth) {
+    display: block;
+    padding: 0;
+  }
+
   .intro {
     max-width: 55%;
     text-align: left;
@@ -631,6 +644,14 @@ $textShad: 1px 2px 2px rgba(0,0,0,0.3);
     position: relative;
     z-index: 9;
     padding-bottom: 2rem;
+
+    @media (max-width: $maxWidth) {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 1.75rem;
+      max-width: 75%;
+    }
 
     h2 {
       color: white;
@@ -645,6 +666,14 @@ $textShad: 1px 2px 2px rgba(0,0,0,0.3);
 
     span {
       color: rgba(0,0,0,0.7);
+    }
+
+    .small-screen {
+      display: none;
+
+      @media (max-width: $maxWidth) {
+        display: block;
+      }
     }
   }
 }
@@ -721,6 +750,11 @@ nav.large-nav {
 
   @media screen and (prefers-color-scheme: dark) {
     border-color: rgba(0, 0, 0, 0.8);
+  }
+
+  @media (max-width: $maxWidth) {
+    margin: 0 auto 2rem auto;
+    width: 40%;
   }
 }
 
@@ -927,6 +961,10 @@ nav.large-nav {
 .bottom-shaper-wrapper {
   height: 15rem;
   position: relative;
+
+  @media (max-width: $maxWidth) {
+    display: none;
+  }
 
   p {
     color: white;
