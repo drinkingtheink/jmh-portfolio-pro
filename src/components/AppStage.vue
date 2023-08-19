@@ -789,15 +789,14 @@ nav.large-nav {
   margin-right: 10px;
 }
 
-$panelMaxHeight: 50rem;
+$panelMaxHeight: 60rem;
 
 .panel {
   margin: 0 2rem 2rem 2rem;
   padding: 1rem 1rem 3rem 1rem;
   background: var(--bgColor);
   border-radius: 10px;
-  min-height: 20rem;
-  max-height: $panelMaxHeight;
+  height: $panelMaxHeight;
   box-shadow: $boxShadow;
   display: flex;
   position: relative;
@@ -873,8 +872,7 @@ $panelMaxHeight: 50rem;
   .right-pane {
     width: 70%;
     padding-left: 2rem;
-    height: calc($panelMaxHeight - 1rem);
-    max-height: calc($panelMaxHeight - 1rem);
+    height: calc(100% - 1rem);
     overflow-y: scroll;
 
     h3 {
@@ -938,18 +936,6 @@ $panelMaxHeight: 50rem;
 
     @media screen and (prefers-color-scheme: dark) {
       background: rgba(255, 255, 255, 0.8);
-    }
-  }
-
-  &.prototyping {
-    .right-pane {
-      height: 44rem;
-    }
-  }
-
-  &.dashboards {
-    .right-pane {
-      height: 51rem;
     }
   }
 }
