@@ -862,7 +862,7 @@ nav.large-nav {
   .right-pane {
     width: 70%;
     padding-left: 2rem;
-    height: 42rem;
+    height: calc(100% - 1em);
     overflow-y: scroll;
 
     h3 {
