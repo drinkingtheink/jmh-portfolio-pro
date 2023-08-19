@@ -97,6 +97,28 @@ $col6: #06365c;
     position: fixed;
   }
 
+  .modal::-webkit-scrollbar {
+      width: 15px;
+    }
+
+  .modal::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+
+    @media screen and (prefers-color-scheme: dark) {
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .modal::-webkit-scrollbar-thumb {
+    background-color: palegreen;
+    border-radius: 10px;
+
+    @media screen and (prefers-color-scheme: dark) {
+      background: rgba(palegreen, 0.8);
+    }
+  }
+
   .modal-header,
   .modal-footer {
     padding: 15px;
@@ -113,9 +135,9 @@ $col6: #06365c;
       position: relative;
 
       .about {
-          background-color: rgba(0, 0, 0, 0.4);
+          background-color: rgba(0, 0, 0, 0.6);
           display: inline-block;
-          padding: 5px 10px;
+          padding: 0.5rem 10px;
           color: white;
       }
   }
@@ -172,6 +194,8 @@ $col6: #06365c;
 
       .l-r {
         margin: 0 0 1rem 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 0.5rem 0;
       }
 
       button {
