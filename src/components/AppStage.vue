@@ -1025,6 +1025,7 @@ $panelMaxHeight: 50rem;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  margin-bottom: 1rem;
 
   img {
     max-width: 45%;
