@@ -67,6 +67,12 @@
             <img src="/prototyping/prototyping4.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" />
           </section>
 
+          <h4>WIREFRAMES TO REAL THING: Master Data Analysis and Education Tool</h4>
+          <section class="img-gallery">
+              <img src="https://i.ibb.co/HXR6pML/DB-Optimizer-WIREFRAME-TO-REAL-1.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" />
+              <img src="https://i.ibb.co/b65mVQs/DB-Optimizer-WIREFRAME-TO-REAL-2.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" />
+          </section>
+
           <h3>Wireframes for Project at Okta - 2021</h3>
           <h4>PROJECT: Solution Engineer Portal</h4>
           <section class="img-gallery">
