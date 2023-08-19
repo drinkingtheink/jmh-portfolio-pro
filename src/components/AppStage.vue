@@ -183,6 +183,9 @@
         <div class="shaper-ready">
           <Shaper class="shaper-stage bottom" />
         </div>
+        <div class="quote-menu">
+          <button v-for="quote, index in quotes" :key="quote" @click="updateQuoteByIndex(index)" :class="{'active': isCurrentQuote(quote)}" />
+        </div>
       </section>
     </main>
 
@@ -332,7 +335,7 @@ export default {
   computed: {
     quotes() {
       const quotes = [
-        'Solving a problem with CSS someone else would have used JS to fix is my power move.',
+        'Solving a problem with CSS someone else would have used JS to fix is my turbo move.',
         'Using the Aesthetic-Usability Effect to my advantage for over a decade.',
         `“Simplicity is about subtracting the obvious and adding the meaningful.” \n ― John Maeda`,
         `“Design can be art. Design can be aesthetics. Design is so simple, that\'s why it is so complicated.” \n  ― Paul Rand`,
@@ -413,6 +416,14 @@ export default {
     },
     getQuote() {
       this.quote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
+    },
+    updateQuoteByIndex(index) {
+      console.log(`LETS DO ${this.quotes[index]}`)
+      this.quote = null;
+      this.quote = this.quotes[index];
+    },
+    isCurrentQuote(quote) {
+      return quote === this.quote;
     },
   }
 }
@@ -582,6 +593,40 @@ body {
     @media (max-width: $maxWidth) {
       height: 460px;
       width: 600px;
+    }
+  }
+}
+
+.quote-menu {
+  position: absolute;
+  right: 3rem;
+  top: 70px;
+  max-width: 90px;
+}
+
+  $quoteBtnDim: 15px;
+
+  button {
+    margin: 4px 4px 0 0;
+    background-color: white;
+    opacity: 0.7;
+    transition: all .3s;
+    border-radius: 50%;
+    height: $quoteBtnDim;
+    width: $quoteBtnDim;
+
+    @media screen and (prefers-color-scheme: dark) {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    &.active {
+      background-color: palegreen;
+      opacity: 1;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
     }
   }
 }
