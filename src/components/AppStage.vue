@@ -602,7 +602,6 @@ body {
   right: 3rem;
   top: 70px;
   max-width: 90px;
-}
 
   $quoteBtnDim: 15px;
 
