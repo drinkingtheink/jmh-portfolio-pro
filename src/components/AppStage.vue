@@ -76,6 +76,12 @@
               <img src="/prototyping/udp4.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" />
           </section>
 
+          <h4>WIREFRAMES TO REAL THING: Solution Engineer Portal</h4>
+          <section class="img-gallery">
+              <img src="https://i.ibb.co/zf5gWWR/UDP-LANDING-page-WIREFRAME-TO-REAL.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" />
+              <img src="https://i.ibb.co/86DqSHf/UDP-ORG-page-WIREFRAME-TO-REAL.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" />
+          </section>
+
           <section v-for="link in protoLinks" :key="link.name" class="functional-app img-gallery-alt">
             <h3>{{ link.name }}</h3>
             <h4>{{ link.subtitle }}</h4>
