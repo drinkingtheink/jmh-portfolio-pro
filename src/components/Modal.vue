@@ -16,6 +16,8 @@
             <div class="annotation">
                 <p class="about">{{ aboutText }}</p>
 
+                <p v-if="imgColl.length > 1" class="l-r">Use left and right arrow keys to browse through set.</p>
+
                 <section class="key">
                     <span class="key-item" v-for="img, index in imgColl" :key="img.src" :class="{ 'active': index === activeImgIndex}" />
                 </section>
@@ -167,6 +169,10 @@ $col6: #06365c;
       background-color: rgba(0, 0, 0, 0.6);
       padding-bottom: 20px;
       max-width: 280px;
+
+      .l-r {
+        margin: 0 0 1rem 0;
+      }
 
       button {
           margin: 10px auto 0 auto;
