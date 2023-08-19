@@ -106,7 +106,7 @@
             <h3>Composable Dashboard at Q2 - 2019-2023</h3>
             <h4>Customizable Dashboards used by millions</h4>
             <img src="/dashboards/comp-dash-quick-glance.gif" class="galleriable" alt="Q2 | Composable Dashboard" />
-            <p>This product is the combined effort of mamy teams across multiple verticals, but I was lucky enough to get to contribute heartily to the core display logic (combo of web components and custom markup) and styles (combo of grid and flex layouts). I helped guide this successful product from ideation to millions of users.</p>
+            <p>This product is the combined effort of mamy teams across multiple verticals, but I was lucky enough to get to contribute heartily to the core display logic (combo of web components and custom markup), a11y, functionality (Ember and Vue Typescript repos) and styles (combo of grid and flex layouts). I helped guide this successful product from ideation to millions of users.</p>
 
             <h3>Data Optimizer at D&B - 2019</h3>
             <h4>Tell the story of data's journey from dirty to actionable</h4>
