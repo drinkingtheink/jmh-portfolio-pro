@@ -60,38 +60,38 @@
           <h3>Wireframes for Project at Dun & Bradstreet - 2019</h3>
           <h4>PROJECT: Master Data Analysis and Education Tool</h4>
           <section class="img-gallery">
-            <img src="/prototyping/prototyping1.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" />
-            <img src="/prototyping/prototyping2.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" />
-            <img src="/prototyping/prototyping3.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" />
-            <img src="/prototyping/prototyping4.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" />
+            <img src="/prototyping/prototyping1.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" loading="lazy" />
+            <img src="/prototyping/prototyping2.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" loading="lazy" />
+            <img src="/prototyping/prototyping3.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" loading="lazy" />
+            <img src="/prototyping/prototyping4.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" loading="lazy" />
           </section>
 
           <h4>WIREFRAMES TO REAL THING: Master Data Analysis and Education Tool</h4>
           <section class="img-gallery">
-              <img src="https://i.ibb.co/HXR6pML/DB-Optimizer-WIREFRAME-TO-REAL-1.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" />
-              <img src="https://i.ibb.co/b65mVQs/DB-Optimizer-WIREFRAME-TO-REAL-2.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" />
+              <img src="https://i.ibb.co/HXR6pML/DB-Optimizer-WIREFRAME-TO-REAL-1.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" loading="lazy" />
+              <img src="https://i.ibb.co/b65mVQs/DB-Optimizer-WIREFRAME-TO-REAL-2.png" class="galleriable" alt="D&B | Master Data Analysis and Education Tool" loading="lazy" />
           </section>
 
           <h3>Wireframes for Project at Okta - 2021</h3>
           <h4>PROJECT: Solution Engineer Portal</h4>
           <section class="img-gallery">
-              <img src="/prototyping/udp1.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" />
-              <img src="/prototyping/udp2.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" />
-              <img src="/prototyping/udp3.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" />
-              <img src="/prototyping/udp4.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" />
+              <img src="/prototyping/udp1.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" loading="lazy" />
+              <img src="/prototyping/udp2.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" loading="lazy" />
+              <img src="/prototyping/udp3.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" loading="lazy" />
+              <img src="/prototyping/udp4.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" loading="lazy" />
           </section>
 
           <h4>WIREFRAMES TO REAL THING: Solution Engineer Portal</h4>
           <section class="img-gallery">
-              <img src="https://i.ibb.co/zf5gWWR/UDP-LANDING-page-WIREFRAME-TO-REAL.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" />
-              <img src="https://i.ibb.co/86DqSHf/UDP-ORG-page-WIREFRAME-TO-REAL.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" />
+              <img src="https://i.ibb.co/zf5gWWR/UDP-LANDING-page-WIREFRAME-TO-REAL.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" loading="lazy" />
+              <img src="https://i.ibb.co/86DqSHf/UDP-ORG-page-WIREFRAME-TO-REAL.png" class="galleriable" alt="Okta | Solution Engineer Sales Portal" loading="lazy" />
           </section>
 
           <section v-for="link in protoLinks" :key="link.name" class="functional-app img-gallery-alt">
             <h3>{{ link.name }}</h3>
             <h4>{{ link.subtitle }}</h4>
 
-            <img :src="link.imgSrc" class="galleriable" :alt="`${link.name}`" />
+            <img :src="link.imgSrc" class="galleriable" :alt="`${link.name}`" loading="lazy" />
 
             <a :href="link.href" target="_blank noreferrer" :style="{ backgroundImage: `url(${link.bgImg})` }"><span>Try It Yourself</span></a>
 
@@ -116,32 +116,32 @@
           <section class="img-gallery-alt">
             <h3>Composable Dashboard at Q2 - 2019-2023</h3>
             <h4>Customizable Dashboards used by millions</h4>
-            <img src="/dashboards/comp-dash-quick-glance.gif" class="galleriable" alt="Q2 | Composable Dashboard" />
+            <img src="/dashboards/comp-dash-quick-glance.gif" class="galleriable" alt="Q2 | Composable Dashboard" loading="lazy" />
             <p>This product is the combined effort of mamy teams across multiple verticals, but I was lucky enough to get to contribute heartily to the core display logic (combo of web components and custom markup), a11y, functionality (Ember and Vue Typescript repos) and styles (combo of grid and flex layouts). I helped guide this successful product from ideation to millions of users.</p>
 
             <h3>Data Optimizer at D&B - 2019</h3>
             <h4>Tell the story of data's journey from compromised to actionable</h4>
-            <img src="https://i.ibb.co/y537Y52/optimizer.gif" class="galleriable" alt="D&B | Data Optimizer" />
+            <img src="https://i.ibb.co/y537Y52/optimizer.gif" class="galleriable" alt="D&B | Data Optimizer" loading="lazy" />
             <p>I love the challenge of using the browser as a narrative vehicle. This app walks users through the lifecycle of data records; both clean and in need of maintenance. Modern CSS and SVGs make it possible to tell stories in compelling ways.</p>
 
             <h3>Advanced API Monitoring at D&B - 2019</h3>
             <h4>Monitoring millions of API interactions daily</h4>
-            <img src="/dashboards/advanced-monitoring.png" class="galleriable" alt="D&B | API Monitoring Dashboard" />
+            <img src="/dashboards/advanced-monitoring.png" class="galleriable" alt="D&B | API Monitoring Dashboard" loading="lazy" />
             <p>Everyday, D&B tracks millions of companies all over the world on over 250 data points per company. Advanced Monitoring allows companies to wade through this data and build their own insights on their customers and competitors. </p>
 
             <h3>Family Tree Explorer at D&B - 2019</h3>
             <h4>Browse relationship trees within public companies</h4>
-            <img src="https://i.ibb.co/5TjN9Mh/family-tree-explorer.gif" class="galleriable" alt="D&B | Family Tree Explorer" />
+            <img src="https://i.ibb.co/5TjN9Mh/family-tree-explorer.gif" class="galleriable" alt="D&B | Family Tree Explorer" loading="lazy" />
             <p>The impetus for this app was "how can we represent the many entities witin a complex company visually?" Using D&B's massive dataset, we used opacity to give a sense of depth and spacial positioning.</p>
 
             <h3>Company Location Plotter at D&B - 2019</h3>
             <h4>Mapping the locations of public company entities</h4>
-            <img src="https://i.ibb.co/f1psFJJ/ubo-map.gif" class="galleriable" alt="D&B | Company Location Plotter" />
+            <img src="https://i.ibb.co/f1psFJJ/ubo-map.gif" class="galleriable" alt="D&B | Company Location Plotter" loading="lazy" />
             <p>Another app based on the question: "how can we represent the many entities witin a complex company visually?" This app plots company HQs on a map to help provide context through physical locations.</p>
 
             <h3>Data Maturity Matrix at D&B - 2018</h3>
             <h4>Visualizing the state of a customer's Master Data Management Program</h4>
-            <img src="https://i.ibb.co/99sMHJm/maturity-matrix.gif" class="galleriable" alt="D&B | Data Maturity Matrix" />
+            <img src="https://i.ibb.co/99sMHJm/maturity-matrix.gif" class="galleriable" alt="D&B | Data Maturity Matrix" loading="lazy" />
             <p>This app helps users diagnose their own Master Data Management Program efficiency and get feedback on performance and insight through a series of questions. A few different charts help users understand their MDM Program in greater detail.</p>
           </section>
         </div>
@@ -164,7 +164,7 @@
             <h3>{{ link.name }}</h3>
             <h4>{{ link.subtitle }}</h4>
 
-            <img :src="link.imgSrc" class="galleriable" :alt="`${link.name}`" />
+            <img :src="link.imgSrc" class="galleriable" :alt="`${link.name}`" loading="lazy" />
 
             <a :href="link.href" target="_blank noreferrer" :style="{ backgroundImage: `url(${link.bgImg})` }"><span>Try It Yourself</span></a>
 
@@ -439,7 +439,6 @@ export default {
       this.quote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
     },
     updateQuoteByIndex(index) {
-      console.log(`LETS DO ${this.quotes[index]}`)
       this.quote = null;
       this.quote = this.quotes[index];
     },
