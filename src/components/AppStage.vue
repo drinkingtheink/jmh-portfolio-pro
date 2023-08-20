@@ -1,18 +1,17 @@
 <template>
   <div class="app-stage">
-    <a name="top" />
+    <a class="bookmark" name="top" />
     <div class="color-morph top" />
     <header class="app">
       <a href="#top" class="top-link">
         <JHMonogram class="jmh" />
       </a>
       <nav class="top">
-        <a 
+        <button 
           v-for="mode in modeOptions" 
-          :href="`#${mode}`"
           :key="mode" 
           @click="updateMode(mode)"
-          >{{ mode === 'designSystems' ? designSysLabel : mode }}</a>
+          >{{ mode === 'designSystems' ? designSysLabel : mode }}</button>
       </nav>
     </header>
     <main>
@@ -45,7 +44,7 @@
           </a>
       </nav>
 
-      <a name="prototyping" />
+      <a class="bookmark" name="prototyping" />
       <section class="panel prototyping">
         <div class="left-pane">
           <h2>Prototyping</h2>
@@ -101,7 +100,7 @@
         </div>
       </section>
 
-      <a name="dashboards" />
+      <a class="bookmark" name="dashboards" />
       <section class="panel dashboards">
         <div class="left-pane">
           <h2>Dashboards/Data Viz</h2>
@@ -148,7 +147,7 @@
         </div>
       </section> 
 
-      <a name="designSystems" />
+      <a class="bookmark" name="designSystems" />
       <section class="panel design-systems">
         <div class="left-pane">
           <h2>Design Systems</h2>
@@ -195,7 +194,7 @@
       </section>
     </main>
 
-    <a name="about" />
+    <a class="bookmark" name="about" />
     <section class="about-section">
       <main>
         <div class="left-about">
@@ -400,6 +399,21 @@ export default {
   methods: {
     updateMode(mode) {
       this.activeMode = mode;
+
+      // scroll to it
+      // find the anchor with the matching # and scroll to it
+      let targetAnch;
+      const anchList = document.querySelectorAll('.bookmark');
+      const anchArray = [...anchList];
+      anchArray.forEach((anch) => {
+        if (anch.name === mode) {
+          targetAnch = anch;
+        }
+      })
+      
+      if (targetAnch) {
+        targetAnch.scrollIntoView();
+      }
     },
     makeImgsClickable() {
       const galleryImg = document.querySelectorAll('.galleriable');
@@ -751,10 +765,12 @@ $textShad: 1px 2px 2px rgba(0,0,0,0.3);
 nav.top {
   // padding-top: 10px;
 
-  a {
-    font-size: 70%;
-    display: inline-block;
-    margin-top: -4px;
+  button {
+    margin-right: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
