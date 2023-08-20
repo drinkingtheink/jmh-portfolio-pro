@@ -121,7 +121,7 @@
             <p>This product is the combined effort of mamy teams across multiple verticals, but I was lucky enough to get to contribute heartily to the core display logic (combo of web components and custom markup), a11y, functionality (Ember and Vue Typescript repos) and styles (combo of grid and flex layouts). I helped guide this successful product from ideation to millions of users.</p>
 
             <h3>Data Optimizer at D&B - 2019</h3>
-            <h4>Tell the story of data's journey from dirty to actionable</h4>
+            <h4>Tell the story of data's journey from compromised to actionable</h4>
             <img src="https://i.ibb.co/y537Y52/optimizer.gif" class="galleriable" alt="D&B | Data Optimizer" />
             <p>I love the challenge of using the browser as a narrative vehicle. This app walks users through the lifecycle of data records; both clean and in need of maintenance. Modern CSS and SVGs make it possible to tell stories in compelling ways.</p>
 
