@@ -225,8 +225,9 @@
 
   <transition name="modal-fade">
     <Modal 
-      v-if="openModal" 
+      v-if="openModal && activeImg" 
       @close="openModal = false" 
+      @goToImg="setActiveImgByIndex"
       :imgSrc="activeImg.src" 
       :aboutText="activeImg.alt" 
       :imgColl="imgColl"
@@ -444,6 +445,9 @@ export default {
     },
     isCurrentQuote(quote) {
       return quote === this.quote;
+    },
+    setActiveImgByIndex(index) {
+      this.activeImg = this.imgColl[index];
     },
   }
 }

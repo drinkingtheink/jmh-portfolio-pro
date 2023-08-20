@@ -1,6 +1,6 @@
 <template>
   <transition name="modal-fade">
-    <div class="modal-backdrop" @click="close" >
+    <div class="modal-backdrop" >
       <div class="modal"
         role="dialog"
         aria-labelledby="modalTitle"
@@ -16,10 +16,10 @@
             <div class="annotation">
                 <p class="about">{{ aboutText }}</p>
 
-                <p v-if="imgColl.length > 1" class="l-r">Use left and right arrow keys to browse through set.</p>
+                <p v-if="imgColl.length > 1" class="l-r">Use left and right arrow keys to browse through set or click on the dots. Close w/ Esc.</p>
 
                 <section class="key">
-                    <span class="key-item" v-for="img, index in imgColl" :key="img.src" :class="{ 'active': index === activeImgIndex}" />
+                    <button class="key-item" v-for="img, index in imgColl" @click="goToImg(index)" :key="img.src" :class="{ 'active': index === activeImgIndex}" />
                 </section>
 
                 <button
@@ -55,6 +55,9 @@
     methods: {
       close() {
         this.$emit('close');
+      },
+      goToImg(index) {
+        this.$emit('goToImg', index);
       },
     },
   };
@@ -186,7 +189,7 @@ $col6: #06365c;
 
   .annotation {
       position: fixed;
-      top: 60%;
+      top: 50%;
       width: 40%;
       background-color: rgba(0, 0, 0, 0.6);
       padding-bottom: 20px;
@@ -209,6 +212,10 @@ $col6: #06365c;
               background-color: white;
           }
       }
+
+      p {
+        line-height: 1.5;
+      }
   }
 
   .key {
@@ -219,12 +226,13 @@ $col6: #06365c;
       transition: all 0.2s;
 
       .key-item {
-          height: 10px;
-          width: 10px;
+          height: 20px;
+          width: 20px;
           border-radius: 50%;
           display: block;
           background-color: white;
           border: 2px solid rgba(0, 0, 0, 0.7);
+          padding: 0;
 
           &.active {
               background-color: $col4;
