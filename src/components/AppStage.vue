@@ -413,6 +413,7 @@ export default {
       
       if (targetAnch) {
         targetAnch.scrollIntoView();
+        window.location.hash = mode;
       }
     },
     makeImgsClickable() {
@@ -763,10 +764,12 @@ $textShad: 1px 2px 2px rgba(0,0,0,0.3);
 }
 
 nav.top {
-  // padding-top: 10px;
+  margin-top: -5px;
 
   button {
     margin-right: 10px;
+    padding: 10px 25px;
+    font-size: 80%;
 
     &:hover {
       cursor: pointer;
