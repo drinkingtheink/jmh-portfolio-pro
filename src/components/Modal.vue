@@ -18,7 +18,7 @@
 
                 <p v-if="imgColl.length > 1" class="l-r">Use left and right arrow keys to browse through set or click on the dots. Close w/ Esc.</p>
 
-                <section class="key">
+                <section class="key" v-if="imgColl.length > 1">
                     <button class="key-item" v-for="img, index in imgColl" @click="goToImg(index)" :key="img.src" :class="{ 'active': index === activeImgIndex}" />
                 </section>
 
