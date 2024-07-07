@@ -29,6 +29,18 @@
         <Shaper class="shaper-stage" />
       </section>
 
+      <section class="bottom-shaper-wrapper">
+        <transition name="slide-fade" mode="out-in">
+          <p class="quote" :key="quote">{{ quote }}</p>
+        </transition>
+        <div class="shaper-ready">
+          <Shaper class="shaper-stage bottom" />
+        </div>
+        <div class="quote-menu">
+          <button v-for="quote, index in quotes" :key="quote" @click="updateQuoteByIndex(index)" :class="{'active': isCurrentQuote(quote)}" />
+        </div>
+      </section>
+
       <nav class="large-nav">
         <a 
           v-for="mode in modeOptions"
@@ -180,18 +192,6 @@
           </ul>
         </div>
       </section>
-
-      <section class="bottom-shaper-wrapper">
-        <transition name="slide-fade" mode="out-in">
-          <p class="quote" :key="quote">{{ quote }}</p>
-        </transition>
-        <div class="shaper-ready">
-          <Shaper class="shaper-stage bottom" />
-        </div>
-        <div class="quote-menu">
-          <button v-for="quote, index in quotes" :key="quote" @click="updateQuoteByIndex(index)" :class="{'active': isCurrentQuote(quote)}" />
-        </div>
-      </section>
     </main>
 
     <a class="bookmark" name="about" />
@@ -204,7 +204,7 @@
           
           <p>The great Arthur C. Clarke once said, 'Any sufficiently advanced technology is indistinguishable from magic.' Inspired by this quote, I strive to create software that captivates users and simplifies their lives, and hopefully makes technology feel at least somewhat like a magical experience. Explore my portfolio and witness the fusion of creativity, functionality, and user-centric design in my projects.</p>
 
-          <p>Currently I write features in Fintech for millions of end users while contributing to a Design System used by thousands of devs. If I'm not doing that, I'm coaching my kids in soccer, supporting my local football club, making generative art or in the recording studio.</p>
+          <p>Currently I write features for millions of end users in Fintech while contributing to a Design System used by thousands of devs. If I'm not doing that, I'm coaching my kids in soccer, supporting my local football club, making generative art or in the recording studio.</p>
 
           <p>Thanks so much for visiting. Cheers. - J(a)SON </p>
         </div>
@@ -421,6 +421,7 @@ export default {
       const galleryImg = document.querySelectorAll('.galleriable');
 
       galleryImg.forEach((img) => {
+        console.log(`PARENT EL >>>> ${console.dir(img.parentElement)}`);
         img.addEventListener('click', () => {
           this.activeImg = img;
           this.openModal = true;
