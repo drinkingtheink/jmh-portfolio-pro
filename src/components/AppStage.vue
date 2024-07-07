@@ -25,8 +25,6 @@
             This site is best viewed on a desktop. 
           </p>
         </div>
-
-        <Shaper class="shaper-stage" />
       </section>
 
       <section class="bottom-shaper-wrapper">
@@ -421,7 +419,6 @@ export default {
       const galleryImg = document.querySelectorAll('.galleriable');
 
       galleryImg.forEach((img) => {
-        console.log(`PARENT EL >>>> ${console.dir(img.parentElement)}`);
         img.addEventListener('click', () => {
           this.activeImg = img;
           this.openModal = true;
