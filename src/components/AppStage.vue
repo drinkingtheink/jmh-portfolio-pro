@@ -1060,6 +1060,7 @@ $panelMaxHeight: 60rem;
     margin: auto;
     max-width: 700px;
     line-height: 1.4;
+    z-index: 10000;
   }
 }
 
