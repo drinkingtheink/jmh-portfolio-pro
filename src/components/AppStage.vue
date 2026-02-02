@@ -221,6 +221,8 @@
       </main>
     </section>
 
+    <Me class="me bottom-portrait" />
+
     <div class="color-morph bottom" />
   </div>
 
@@ -897,6 +899,23 @@ nav.large-nav {
   @media (max-width: $maxWidth) {
     margin: 0 auto 2rem auto;
     width: 40%;
+  }
+
+  &.bottom-portrait {
+    position: absolute;
+    right: 0;
+    bottom: -200px;
+    width: 420px;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    background: transparent;
+    z-index: 11;
+
+    @media (max-width: $maxWidth) {
+      display: none;
+    }
   }
 }
 
