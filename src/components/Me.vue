@@ -1,5 +1,5 @@
 <template>
-<div class="me-code-wrapper" :class="{ 'line-only': lineOnly }">
+<div class="me-code-wrapper" :class="{ 'line-only': lineOnly }" :style="weightShiftStyle">
    <svg version="1.1" class="me-code" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 974.5 953.3" style="enable-background:new 0 0 974.5 953.3;" xml:space="preserve">
       <path class="st0" d="M349.1,445.4c0,0,5.2,150.1,57.1,248.8s64.2,118.4,64.2,118.4L551,693.3c0,0,45.7-163.5,47-247.9H349.1z"/>
@@ -55,10 +55,10 @@
             c-0.7-2.4-1.5-4.9-3.1-6.9c-2-2.5-5.1-3.7-8.1-4.8c-8.6-3.1-17.3-5.6-26.3-6.5c-4.4-0.4-8.7-0.3-13.1,0.2
             c-4.4,0.6-8.6,1.8-12.6,3.6c-0.7,0.4-1.4,0.8-0.3,1.1c1.3,0.3,2.6,0.4,3.9,0.3c4.1,0.1,8.1-0.1,12.2-0.3c4.5-0.3,9,0,13.3,1.1
             C428.2,285,428.7,285.2,429.3,285.4z"/>
-         <path class="st3 left-eyebrow" d="M520.8,287.8c13.4,0.7,26.8,1,40.1,1c3.6-0.1,7.3,0.1,10.9,0.5c3,0.5,6,1.3,8.9,2.2l15,4.5
+         <path class="st3 left-eyebrow" :class="{ 'eyebrow-raised': leftEyebrowRaised }" d="M520.8,287.8c13.4,0.7,26.8,1,40.1,1c3.6-0.1,7.3,0.1,10.9,0.5c3,0.5,6,1.3,8.9,2.2l15,4.5
             c-4.4-1.3-7.7-5-11.7-7.1c-4-2.2-8.4-2.7-12.8-3.7c-9.9-2.2-19.4-6.1-29.2-9c-7.8-2.3-16.4-4.2-24.6-3.3c-2.3,0.1-4.5,1.1-6.1,2.6
             c-2,2.1-3.1,5.5-3.4,8.3c-0.3,2.4,3.6,2.8,5.3,3.2C515.8,287.5,518.3,287.7,520.8,287.8z"/>
-         <path class="st3 right-eyebrow" d="M417.1,283.9c-21.8-0.8-42.9,10.5-64.5,8.1c6.3-1.2,12.4-2.8,18.5-4.7c11.3-3.5,22.2-8,33.6-11.3
+         <path class="st3 right-eyebrow" :class="{ 'eyebrow-raised': rightEyebrowRaised }" d="M417.1,283.9c-21.8-0.8-42.9,10.5-64.5,8.1c6.3-1.2,12.4-2.8,18.5-4.7c11.3-3.5,22.2-8,33.6-11.3
             s23.3-5.2,35-3.3c2.8,0.5,5.7,1.2,7.9,3c2.1,1.6,3.1,4.1,2.8,6.7c-0.3,2.1-2.1,3.7-4.3,3.8c-5.9-0.1-11.8-0.5-17.6-1.2
             C424.7,284.6,420.9,284.1,417.1,283.9z"/>
          <path class="st0" d="M373.3,429.5c0.2,6.8,0.2,13.6,0.2,20.4c0.1-5.8-1.3-11.5-3.9-16.6c-0.5-1.1-1.2-2.1-2.1-2.9
@@ -222,8 +222,71 @@
 export default {
   name: 'Me',
   props: [
-     'lineOnly'
+     'lineOnly',
+     'animateEyebrows'
   ],
+  data() {
+    return {
+      leftEyebrowRaised: false,
+      rightEyebrowRaised: false,
+      eyebrowInterval: null,
+      weightShiftInterval: null,
+      shiftX: 0,
+      shiftY: 0,
+    }
+  },
+  computed: {
+    weightShiftStyle() {
+      if (!this.animateEyebrows) return {};
+      return {
+        transform: `translate(${this.shiftX}px, ${this.shiftY}px)`,
+      };
+    }
+  },
+  mounted() {
+    if (this.animateEyebrows) {
+      this.startEyebrowAnimation();
+      this.startWeightShift();
+    }
+  },
+  beforeUnmount() {
+    if (this.eyebrowInterval) {
+      clearInterval(this.eyebrowInterval);
+    }
+    if (this.weightShiftInterval) {
+      clearInterval(this.weightShiftInterval);
+    }
+  },
+  methods: {
+    startEyebrowAnimation() {
+      this.eyebrowInterval = setInterval(() => {
+        // 70% chance to raise an eyebrow
+        if (Math.random() < 0.7) {
+          // Randomly pick left or right eyebrow
+          const raiseLeft = Math.random() < 0.5;
+
+          if (raiseLeft) {
+            this.leftEyebrowRaised = true;
+          } else {
+            this.rightEyebrowRaised = true;
+          }
+
+          // Lower the eyebrow after a short time
+          setTimeout(() => {
+            this.leftEyebrowRaised = false;
+            this.rightEyebrowRaised = false;
+          }, 800);
+        }
+      }, 8000);
+    },
+    startWeightShift() {
+      this.weightShiftInterval = setInterval(() => {
+        // Random shift between -6 and 6 pixels in any direction
+        this.shiftX = (Math.random() - 0.5) * 12;
+        this.shiftY = (Math.random() - 0.5) * 8;
+      }, 12000);
+    }
+  }
 }
 </script>
 
@@ -242,6 +305,14 @@ export default {
 .st10{fill:#1A545C;}
 .st11{fill:#F5FFF6;}
 .st12{fill:#00D0C5;}
+
+.left-eyebrow, .right-eyebrow {
+   transition: transform 0.8s ease-out;
+}
+
+.eyebrow-raised {
+   transform: translateY(-8px);
+}
 
 @mixin svgLineDraw {
    svg path {
@@ -266,6 +337,7 @@ export default {
 
 .me-code-wrapper {
     background-color: rgba(0,0,0,0.4);
+    transition: transform 2s ease-in-out;
 
     * {
        transition: all 0.2s;

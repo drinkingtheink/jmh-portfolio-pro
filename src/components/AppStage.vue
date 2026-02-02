@@ -221,7 +221,7 @@
       </main>
     </section>
 
-    <Me class="me bottom-portrait" />
+    <Me class="me bottom-portrait" :animateEyebrows="true" />
 
     <div class="color-morph bottom" />
   </div>
