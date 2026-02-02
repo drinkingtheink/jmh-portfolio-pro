@@ -507,17 +507,19 @@ export default {
 
 .me-code-wrapper {
     background-color: rgba(0,0,0,0.4);
-    transition: transform 2s ease-in-out;
+    transition: transform 2s ease-in-out, filter 0.8s ease-in-out;
+    filter: drop-shadow(8px 8px 16px rgba(0,0,0,0.5));
 
     * {
        transition: all 0.8s ease-in-out;
     }
-    
+
     svg {
         margin-bottom: -3px;
     }
 
     &:hover {
+       filter: drop-shadow(0 0 0 transparent);
        @include svgLineDraw;
 
        #SHIRT .st8,
