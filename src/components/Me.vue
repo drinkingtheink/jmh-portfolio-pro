@@ -264,7 +264,8 @@ export default {
   name: 'Me',
   props: [
      'lineOnly',
-     'animateEyebrows'
+     'animateEyebrows',
+     'animateShirt'
   ],
   data() {
     return {
@@ -294,6 +295,8 @@ export default {
       this.startWeightShift();
       this.startShirtAnimation();
       this.startLightbulbAnimation();
+    } else if (this.animateShirt) {
+      this.startShirtAnimation();
     }
   },
   beforeUnmount() {
