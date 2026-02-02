@@ -1,5 +1,16 @@
 <template>
 <div class="me-code-wrapper" :class="{ 'line-only': lineOnly, [shirtClass]: animateEyebrows }" :style="weightShiftStyle">
+   <transition name="bulb-fade">
+      <div v-if="showLightbulb && animateEyebrows" class="lightbulb">
+         <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="32" cy="24" rx="16" ry="18" fill="#FFF9C4" class="bulb-glow"/>
+            <ellipse cx="32" cy="24" rx="12" ry="14" fill="#FFEB3B"/>
+            <rect x="28" y="40" width="8" height="6" fill="#9E9E9E"/>
+            <rect x="27" y="46" width="10" height="3" rx="1" fill="#757575"/>
+            <rect x="27" y="49" width="10" height="2" rx="1" fill="#616161"/>
+         </svg>
+      </div>
+   </transition>
    <svg version="1.1" class="me-code" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 974.5 953.3" style="enable-background:new 0 0 974.5 953.3;" xml:space="preserve">
       <defs>
@@ -262,9 +273,11 @@ export default {
       eyebrowInterval: null,
       weightShiftInterval: null,
       shirtInterval: null,
+      lightbulbInterval: null,
       shiftX: 0,
       shiftY: 0,
       shirtClass: 'shirt-default',
+      showLightbulb: false,
     }
   },
   computed: {
@@ -280,6 +293,7 @@ export default {
       this.startEyebrowAnimation();
       this.startWeightShift();
       this.startShirtAnimation();
+      this.startLightbulbAnimation();
     }
   },
   beforeUnmount() {
@@ -291,6 +305,9 @@ export default {
     }
     if (this.shirtInterval) {
       clearInterval(this.shirtInterval);
+    }
+    if (this.lightbulbInterval) {
+      clearInterval(this.lightbulbInterval);
     }
   },
   methods: {
@@ -341,6 +358,18 @@ export default {
         ];
         this.shirtClass = shirtStyles[Math.floor(Math.random() * shirtStyles.length)];
       }, 10000);
+    },
+    startLightbulbAnimation() {
+      this.lightbulbInterval = setInterval(() => {
+        // 30% chance to show lightbulb
+        if (Math.random() < 0.3) {
+          this.showLightbulb = true;
+          // Hide after 3 seconds
+          setTimeout(() => {
+            this.showLightbulb = false;
+          }, 3000);
+        }
+      }, 18000);
     }
   }
 }
@@ -368,6 +397,56 @@ export default {
 
 .eyebrow-raised {
    transform: translateY(-8px);
+}
+
+// Lightbulb styles
+@keyframes bulb-pulse {
+   0%, 100% {
+      filter: drop-shadow(0 0 8px #FFEB3B) drop-shadow(0 0 20px #FFF9C4);
+   }
+   50% {
+      filter: drop-shadow(0 0 15px #FFEB3B) drop-shadow(0 0 30px #FFF9C4);
+   }
+}
+
+.lightbulb {
+   position: absolute;
+   top: -5%;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 60px;
+   height: 60px;
+   z-index: 20;
+   animation: bulb-pulse 1.5s ease-in-out infinite;
+
+   svg {
+      width: 100%;
+      height: 100%;
+   }
+
+   .bulb-glow {
+      filter: blur(2px);
+   }
+}
+
+.bulb-fade-enter-active {
+   transition: all 0.5s ease-out;
+}
+
+.bulb-fade-leave-active {
+   transition: all 0.8s ease-in;
+}
+
+.bulb-fade-enter-from,
+.bulb-fade-leave-to {
+   opacity: 0;
+   transform: translateX(-50%) translateY(10px) scale(0.5);
+}
+
+.bulb-fade-enter-to,
+.bulb-fade-leave-from {
+   opacity: 1;
+   transform: translateX(-50%) translateY(0) scale(1);
 }
 
 // Shirt color variations
