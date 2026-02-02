@@ -16,7 +16,7 @@
             <div v-for="rect in rects" :key="rect.id" class="rect-wrapper" :style="rect.styles" :class="{ 'drift': rect.drift }" />
         </transition-group>
 
-        <button class="redraw-shapes" @click="shapeUp()">Redraw</button>
+        <button class="redraw-shapes" @click="manualRedraw()">Redraw</button>
         <section class="timing-bar-wrapper">
             <div class="timing-bar"></div>
         </section>
@@ -174,6 +174,16 @@ export default {
                 this.triangles = this.triangles.filter(t => !oldTriangleIds.includes(t.id));
                 this.rects = this.rects.filter(r => !oldRectIds.includes(r.id));
             }, transitionDuration);
+        },
+        manualRedraw() {
+            this.shapeUp();
+            this.resetTimer();
+        },
+        resetTimer() {
+            clearInterval(this.interval);
+            this.interval = setInterval(() => {
+                this.shapeUp();
+            }, aniLength);
         }
     },
 }

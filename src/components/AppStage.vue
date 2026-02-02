@@ -30,7 +30,7 @@
       <section class="bottom-shaper-wrapper">
         <transition name="slide-fade" mode="out-in">
           <div class="quote-wrapper" :key="quote">
-            <p class="quote-text">{{ quoteText }}</p>
+            <p class="quote-text" :style="{ fontSize: quoteFontSize }">{{ quoteText }}</p>
             <cite class="quote-citation">{{ quoteCitation }}</cite>
           </div>
         </transition>
@@ -386,6 +386,24 @@ export default {
         return this.quote.substring(dashIndex).trim();
       }
       return '';
+    },
+    quoteFontSize() {
+      const length = this.quoteText.length;
+      // Scale font size based on quote length
+      // Short quotes (< 60 chars): 2.75rem
+      // Long quotes (> 180 chars): 1.5rem
+      const minSize = 1.5;
+      const maxSize = 2.75;
+      const minLength = 60;
+      const maxLength = 180;
+
+      if (length <= minLength) return `${maxSize}rem`;
+      if (length >= maxLength) return `${minSize}rem`;
+
+      // Linear interpolation between min and max
+      const scale = (length - minLength) / (maxLength - minLength);
+      const size = maxSize - (scale * (maxSize - minSize));
+      return `${size.toFixed(2)}rem`;
     },
     matchingLinkIndexInColl() {
       let linkMatch = null;
@@ -1096,9 +1114,9 @@ $panelMaxHeight: 60rem;
   .quote-text {
     color: white;
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
-    font-size: 2rem;
     line-height: 1.4;
     margin: 0;
+    transition: font-size 0.3s ease;
   }
 
   .quote-citation {
