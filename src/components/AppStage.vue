@@ -29,7 +29,10 @@
 
       <section class="bottom-shaper-wrapper">
         <transition name="slide-fade" mode="out-in">
-          <p class="quote" :key="quote">{{ quote }}</p>
+          <div class="quote-wrapper" :key="quote">
+            <p class="quote-text">{{ quoteText }}</p>
+            <cite class="quote-citation">{{ quoteCitation }}</cite>
+          </div>
         </transition>
         <div class="shaper-ready">
           <Shaper class="shaper-stage bottom" />
@@ -357,6 +360,32 @@ export default {
         `“The rhythm of relations of color and size makes the absolute appear in the relativity of time and space.” – Piet Mondrian`,
       ]
       return quotes;
+    },
+    quoteText() {
+      if (!this.quote) return '';
+      // Try splitting on newline first
+      if (this.quote.includes('\n')) {
+        return this.quote.split('\n')[0]?.trim() || '';
+      }
+      // Fall back to finding the last " - " or " ― "
+      const dashIndex = Math.max(this.quote.lastIndexOf(' - '), this.quote.lastIndexOf(' ― '));
+      if (dashIndex > -1) {
+        return this.quote.substring(0, dashIndex).trim();
+      }
+      return this.quote;
+    },
+    quoteCitation() {
+      if (!this.quote) return '';
+      // Try splitting on newline first
+      if (this.quote.includes('\n')) {
+        return this.quote.split('\n')[1]?.trim() || '';
+      }
+      // Fall back to finding the last " - " or " ― "
+      const dashIndex = Math.max(this.quote.lastIndexOf(' - '), this.quote.lastIndexOf(' ― '));
+      if (dashIndex > -1) {
+        return this.quote.substring(dashIndex).trim();
+      }
+      return '';
     },
     matchingLinkIndexInColl() {
       let linkMatch = null;
@@ -1046,10 +1075,7 @@ $panelMaxHeight: 60rem;
     display: none;
   }
 
-  p {
-    color: white;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
-    font-size: 2rem;
+  .quote-wrapper {
     position: absolute;
     bottom: 50%;
     top: 12%;
@@ -1057,8 +1083,24 @@ $panelMaxHeight: 60rem;
     right: 0;
     margin: auto;
     max-width: 700px;
-    line-height: 1.4;
     z-index: 10000;
+  }
+
+  .quote-text {
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+    font-size: 2rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .quote-citation {
+    display: block;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-size: 1.25rem;
+    text-align: right;
+    margin: 0.5rem 0 0 0;
   }
 }
 
