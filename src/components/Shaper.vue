@@ -1,19 +1,19 @@
 <template>
     <div class="shaper" v-if="circles.length && triangles.length">
         <transition-group name="fade" >
-            <div v-for="triangle, index in triangles" :key="`triangle-${index}-wrapper`" class="triangle-wrapper" :style="getTriStyles()" :class="{ 'drift': Math.random() < 0.5 }">
-                <Triangle class='actual-shape' :fill="getTriStyles.fill" :key="`triangle-${index}`" />
+            <div v-for="triangle in triangles" :key="triangle.id" class="triangle-wrapper" :style="triangle.styles" :class="{ 'drift': triangle.drift }">
+                <Triangle class='actual-shape' :fill="triangle.styles.fill" />
             </div>
         </transition-group>
 
         <transition-group name="fade" >
-            <div v-for="circle, index in circles" :key="`circle-${index}-wrapper`"  class="circle-wrapper drif" :style="getCircleStyles()" :class="{ 'drift2': Math.random() < 0.5 }">
-                <Circle class='actual-shape' :fill="getCircleStyles.fill" :key="`circle-${index}`" />
+            <div v-for="circle in circles" :key="circle.id" class="circle-wrapper" :style="circle.styles" :class="{ 'drift2': circle.drift }">
+                <Circle class='actual-shape' :fill="circle.styles.fill" />
             </div>
         </transition-group>
-            
+
         <transition-group name="fade">
-            <div v-for="rect, index in rects" :key="`rect-${index}-wrapper`"  class="rect-wrapper drif" :style="getRectStyles()" :class="{ 'drift': Math.random() < 0.5 }" />
+            <div v-for="rect in rects" :key="rect.id" class="rect-wrapper" :style="rect.styles" :class="{ 'drift': rect.drift }" />
         </transition-group>
 
         <button class="redraw-shapes" @click="shapeUp()">Redraw</button>
@@ -30,6 +30,7 @@ import Triangle from './shapes/Triangle.vue';
 const colorSet = ['#54478c', '#2c699a', '#0db39e', '#83e377', '#f29e4c'];
 
 const aniLength = 10000;
+const transitionDuration = 2000;
 
 export default {
     name: 'Shaper',
@@ -43,6 +44,7 @@ export default {
             rectsCount: 0,
             createShapes: false,
             interval: null,
+            shapeGeneration: 0,
         }
     },
     components: {
@@ -132,30 +134,46 @@ export default {
             }
         },
         shapeUp() {
-            this.circles = [];
-            this.circlesCount = 0;
-            this.triangles = [];
-            this.trianglesCount = 0;
-            this.rects = [];
-            this.rectsCount = 0;
+            const oldCircleIds = this.circles.map(c => c.id);
+            const oldTriangleIds = this.triangles.map(t => t.id);
+            const oldRectIds = this.rects.map(r => r.id);
+
+            this.shapeGeneration++;
+            const gen = this.shapeGeneration;
 
             this.circlesCount = this.generateRandom(5, 8);
-
             for (let i = 0; i < this.circlesCount; i++) {
-                this.circles.push(`circle-${i}`);
+                this.circles.push({
+                    id: `circle-${gen}-${i}`,
+                    styles: this.getCircleStyles(),
+                    drift: Math.random() < 0.5
+                });
             }
 
             this.trianglesCount = this.generateRandom(4, 10);
-
             for (let i = 0; i < this.trianglesCount; i++) {
-                this.triangles.push(`triangle-${i}`);
+                this.triangles.push({
+                    id: `triangle-${gen}-${i}`,
+                    styles: this.getTriStyles(),
+                    drift: Math.random() < 0.5
+                });
             }
 
             this.rectsCount = this.generateRandom(0, 3);
-
             for (let i = 0; i < this.rectsCount; i++) {
-                this.rects.push(`rect-${i}`);
+                this.rects.push({
+                    id: `rect-${gen}-${i}`,
+                    styles: this.getRectStyles(),
+                    drift: Math.random() < 0.5
+                });
             }
+
+            // Remove old shapes after new ones have faded in
+            setTimeout(() => {
+                this.circles = this.circles.filter(c => !oldCircleIds.includes(c.id));
+                this.triangles = this.triangles.filter(t => !oldTriangleIds.includes(t.id));
+                this.rects = this.rects.filter(r => !oldRectIds.includes(r.id));
+            }, transitionDuration);
         }
     },
 }
@@ -268,10 +286,18 @@ export default {
     animation-timing-function: reverse;
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+.fade-enter-active {
+  transition: opacity 1.5s ease-in-out;
+}
+.fade-leave-active {
+  transition: opacity 2s ease-out;
+  position: absolute;
+  pointer-events: none;
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
+}
+.fade-enter-to, .fade-leave {
+  opacity: 1;
 }
 </style>
