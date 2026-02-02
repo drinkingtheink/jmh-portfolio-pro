@@ -340,7 +340,7 @@ export default {
     transition: transform 2s ease-in-out;
 
     * {
-       transition: all 0.2s;
+       transition: all 0.8s ease-in-out;
     }
     
     svg {
