@@ -467,6 +467,13 @@ export default {
     updateQuoteByIndex(index) {
       this.quote = null;
       this.quote = this.quotes[index];
+      this.resetQuoteTimer();
+    },
+    resetQuoteTimer() {
+      clearInterval(this.interval);
+      this.interval = setInterval(() => {
+        this.getQuote();
+      }, 10000);
     },
     isCurrentQuote(quote) {
       return quote === this.quote;
