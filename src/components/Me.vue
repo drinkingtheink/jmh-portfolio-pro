@@ -275,7 +275,7 @@ export default {
           setTimeout(() => {
             this.leftEyebrowRaised = false;
             this.rightEyebrowRaised = false;
-          }, 800);
+          }, 2000);
         }
       }, 8000);
     },
