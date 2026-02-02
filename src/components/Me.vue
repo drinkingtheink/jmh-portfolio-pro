@@ -519,6 +519,14 @@ export default {
 
     &:hover {
        @include svgLineDraw;
+
+       #SHIRT .st8,
+       #SHIRT .st9 {
+          fill: none !important;
+          stroke: rgba(255,255,255,0.8);
+          stroke-width: 4;
+          stroke-miterlimit: 10;
+       }
     }
 
     &.line-only {
