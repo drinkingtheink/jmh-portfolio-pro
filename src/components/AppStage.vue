@@ -903,7 +903,7 @@ nav.large-nav {
 
   &.bottom-portrait {
     position: absolute;
-    right: 2rem;
+    right: 2.5rem;
     bottom: -200px;
     width: 500px;
     height: auto;
