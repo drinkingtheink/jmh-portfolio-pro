@@ -449,6 +449,12 @@ export default {
    transform: translateX(-50%) translateY(0) scale(1);
 }
 
+// Shirt transition
+#SHIRT .st8,
+#SHIRT .st9 {
+   transition: fill 1.5s ease-in-out;
+}
+
 // Shirt color variations
 .shirt-default #SHIRT .st8 { fill: #72B776; }
 .shirt-default #SHIRT .st9 { fill: #19601B; }
