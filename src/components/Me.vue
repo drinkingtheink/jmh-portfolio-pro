@@ -1,7 +1,37 @@
 <template>
-<div class="me-code-wrapper" :class="{ 'line-only': lineOnly }" :style="weightShiftStyle">
+<div class="me-code-wrapper" :class="{ 'line-only': lineOnly, [shirtClass]: animateEyebrows }" :style="weightShiftStyle">
    <svg version="1.1" class="me-code" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 974.5 953.3" style="enable-background:new 0 0 974.5 953.3;" xml:space="preserve">
+      <defs>
+         <pattern id="stripes-blue" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+            <rect width="20" height="20" fill="#5B8FB9"/>
+            <rect width="8" height="20" fill="#3d6a8a"/>
+         </pattern>
+         <pattern id="stripes-green" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
+            <rect width="20" height="20" fill="#72B776"/>
+            <rect width="8" height="20" fill="#4a8a4e"/>
+         </pattern>
+         <pattern id="plaid-purple" patternUnits="userSpaceOnUse" width="30" height="30">
+            <rect width="30" height="30" fill="#8B7BB5"/>
+            <rect width="30" height="6" fill="#6b5a95"/>
+            <rect width="6" height="30" fill="#6b5a95"/>
+            <rect width="6" height="6" fill="#5a4a7a"/>
+         </pattern>
+         <pattern id="plaid-coral" patternUnits="userSpaceOnUse" width="30" height="30">
+            <rect width="30" height="30" fill="#E8927C"/>
+            <rect width="30" height="6" fill="#c87060"/>
+            <rect width="6" height="30" fill="#c87060"/>
+            <rect width="6" height="6" fill="#a85545"/>
+         </pattern>
+         <pattern id="dots-teal" patternUnits="userSpaceOnUse" width="20" height="20">
+            <rect width="20" height="20" fill="#0db39e"/>
+            <circle cx="10" cy="10" r="4" fill="#ffffff50"/>
+         </pattern>
+         <pattern id="dots-blue" patternUnits="userSpaceOnUse" width="20" height="20">
+            <rect width="20" height="20" fill="#5B8FB9"/>
+            <circle cx="10" cy="10" r="4" fill="#ffffff50"/>
+         </pattern>
+      </defs>
       <path class="st0" d="M349.1,445.4c0,0,5.2,150.1,57.1,248.8s64.2,118.4,64.2,118.4L551,693.3c0,0,45.7-163.5,47-247.9H349.1z"/>
       <path class="st1" d="M428.5,472.2c0,0,0.2,6.3,1.1,17.1c13.9-0.9,27.8,0.7,41.2,4.6c7.5,2,14.6,5.1,21.2,9.2
          c16.5,10.7-48,26.8-42.9,44.4c2,7,1.2,13-0.1,20c-1.8,10.4-1.2,21.1-0.7,31.6c0.7,13.2,2.1,26.4,4.3,39.5
@@ -231,8 +261,10 @@ export default {
       rightEyebrowRaised: false,
       eyebrowInterval: null,
       weightShiftInterval: null,
+      shirtInterval: null,
       shiftX: 0,
       shiftY: 0,
+      shirtClass: 'shirt-default',
     }
   },
   computed: {
@@ -247,6 +279,7 @@ export default {
     if (this.animateEyebrows) {
       this.startEyebrowAnimation();
       this.startWeightShift();
+      this.startShirtAnimation();
     }
   },
   beforeUnmount() {
@@ -255,6 +288,9 @@ export default {
     }
     if (this.weightShiftInterval) {
       clearInterval(this.weightShiftInterval);
+    }
+    if (this.shirtInterval) {
+      clearInterval(this.shirtInterval);
     }
   },
   methods: {
@@ -285,6 +321,26 @@ export default {
         this.shiftX = (Math.random() - 0.5) * 12;
         this.shiftY = (Math.random() - 0.5) * 8;
       }, 12000);
+    },
+    startShirtAnimation() {
+      this.shirtInterval = setInterval(() => {
+        const shirtStyles = [
+          // Solid colors
+          'shirt-default',
+          'shirt-blue',
+          'shirt-purple',
+          'shirt-coral',
+          'shirt-teal',
+          // Patterned shirts
+          'shirt-stripes-blue',
+          'shirt-stripes-green',
+          'shirt-plaid-purple',
+          'shirt-plaid-coral',
+          'shirt-dots-teal',
+          'shirt-dots-blue',
+        ];
+        this.shirtClass = shirtStyles[Math.floor(Math.random() * shirtStyles.length)];
+      }, 10000);
     }
   }
 }
@@ -313,6 +369,41 @@ export default {
 .eyebrow-raised {
    transform: translateY(-8px);
 }
+
+// Shirt color variations
+.shirt-default #SHIRT .st8 { fill: #72B776; }
+.shirt-default #SHIRT .st9 { fill: #19601B; }
+
+.shirt-blue #SHIRT .st8 { fill: #5B8FB9; }
+.shirt-blue #SHIRT .st9 { fill: #1A3F5C; }
+
+.shirt-purple #SHIRT .st8 { fill: #8B7BB5; }
+.shirt-purple #SHIRT .st9 { fill: #4A3B6B; }
+
+.shirt-coral #SHIRT .st8 { fill: #E8927C; }
+.shirt-coral #SHIRT .st9 { fill: #B5493A; }
+
+.shirt-teal #SHIRT .st8 { fill: #0db39e; }
+.shirt-teal #SHIRT .st9 { fill: #065a4e; }
+
+// Patterned shirts
+.shirt-stripes-blue #SHIRT .st8 { fill: url(#stripes-blue); }
+.shirt-stripes-blue #SHIRT .st9 { fill: #1A3F5C; }
+
+.shirt-stripes-green #SHIRT .st8 { fill: url(#stripes-green); }
+.shirt-stripes-green #SHIRT .st9 { fill: #19601B; }
+
+.shirt-plaid-purple #SHIRT .st8 { fill: url(#plaid-purple); }
+.shirt-plaid-purple #SHIRT .st9 { fill: #4A3B6B; }
+
+.shirt-plaid-coral #SHIRT .st8 { fill: url(#plaid-coral); }
+.shirt-plaid-coral #SHIRT .st9 { fill: #B5493A; }
+
+.shirt-dots-teal #SHIRT .st8 { fill: url(#dots-teal); }
+.shirt-dots-teal #SHIRT .st9 { fill: #065a4e; }
+
+.shirt-dots-blue #SHIRT .st8 { fill: url(#dots-blue); }
+.shirt-dots-blue #SHIRT .st9 { fill: #1A3F5C; }
 
 @mixin svgLineDraw {
    svg path {
