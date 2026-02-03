@@ -18,7 +18,7 @@
 
         <button class="redraw-shapes" @click="manualRedraw()">Redraw</button>
         <section class="timing-bar-wrapper">
-            <div class="timing-bar"></div>
+            <div class="timing-bar" :key="'timer-' + shapeGeneration"></div>
         </section>
     </div>
 </template>
@@ -271,7 +271,7 @@ export default {
             height: 1px;
             border-radius: 10px;
             margin-top: -1px;
-            animation: spread 10s linear 0.4s infinite forwards;
+            animation: spread 10s linear forwards;
             transition: all 0.2s;
         }
     }
