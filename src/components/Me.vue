@@ -1,5 +1,5 @@
 <template>
-<div class="me-code-wrapper" :class="{ 'line-only': lineOnly, [shirtClass]: animateEyebrows }" :style="weightShiftStyle">
+<div class="me-code-wrapper" :class="{ 'line-only': lineOnly, [shirtClass]: animateEyebrows || animateShirt }" :style="weightShiftStyle">
    <transition name="bulb-fade">
       <div v-if="showLightbulb && animateEyebrows" class="lightbulb">
          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
@@ -316,8 +316,8 @@ export default {
   methods: {
     startEyebrowAnimation() {
       this.eyebrowInterval = setInterval(() => {
-        // 70% chance to raise an eyebrow
-        if (Math.random() < 0.7) {
+        // 35% chance to raise an eyebrow
+        if (Math.random() < 0.35) {
           // Randomly pick left or right eyebrow
           const raiseLeft = Math.random() < 0.5;
 
@@ -331,9 +331,9 @@ export default {
           setTimeout(() => {
             this.leftEyebrowRaised = false;
             this.rightEyebrowRaised = false;
-          }, 2000);
+          }, 3000);
         }
-      }, 8000);
+      }, 12000);
     },
     startWeightShift() {
       this.weightShiftInterval = setInterval(() => {
